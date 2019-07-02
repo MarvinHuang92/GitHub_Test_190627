@@ -1,0 +1,36 @@
+/**index.wxss**/
+/* 这个页面的注释和html不一样 */
+/* js的语法格式和c是类似的 */
+
+/* 技巧：Ctrl+/可以快速注释 */
+
+/* 记得要用分号结尾 */
+#thev{
+  width: 500rpx;
+  height: 500rpx;
+  background-color: #FF0000;
+  margin: 50rpx;
+  padding: 50rpx;
+  /* 如果margin里面有两个数，分别表示上下、左右；
+  如果有四个数，表示上、右、下、左；
+  如果有三个数，表示上（左右）下 */
+  border-style: solid;
+  border-color: #0000FF;
+  border-width: 20rpx;
+  /* 或者使用一行写上述三个参数，顺序同上 */
+  /* border: solid #00FFFF 20rpx; */
+}
+
+#inv{
+  width:100rpx;
+  height:100rpx;
+  background-color: #00FF00;
+  /*margin: 50rpx;*/
+}
+
+#otherv{
+  width: 200rpx;
+  height: 200rpx;
+  background-color: #000000;
+  margin: 50rpx;
+}

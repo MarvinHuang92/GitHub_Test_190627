@@ -1,0 +1,11 @@
+<!--pages/index2/index2.wxml-->
+<text> "this is for test only" </text>
+
+<view id ="container">
+  <view class = "cubic color-red"></view>
+  <!-- class后面可以放无数个类，用空格分开 -->
+  <!-- 每一个类都有各自的属性，如果有重复的属性，写在后面的会覆盖前面的 -->
+  <view class = "cubic color-green"></view>
+  <view class = "cubic color-red"></view>
+  <view class = "cubic"></view>
+</view>

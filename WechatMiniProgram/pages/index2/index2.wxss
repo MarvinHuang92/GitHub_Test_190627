@@ -1,0 +1,39 @@
+/* pages/index2/index2.wxss */
+
+/* 具体某个id的定义方式，用#开头 */
+#container{
+  /* display属性默认是box形式，也就是每个东西都占单独的一行 */
+  /* 如果将它设置成flex，默认会变成横向排列，同时自动适应宽度 */
+  display: flex;
+  /* 如果再加一个flex-direction: column，则是竖向排列，自适应高度 */
+  flex-direction: row;
+  /* 下面这个是沿主轴排列方式，有flex-start, flex-end, center, space-between, space-around 5种选择 */
+  justify-content: space-around;
+  /* 下面是交叉轴排列，有flex-start, flex-end, center, stretch 4种选项 */
+  align-items: center;
+
+  width: 100%;
+  height: 700rpx;
+  background-color: #DDDDDD;
+  
+}
+
+/* 以下是class的定义方式，用点开头 */
+.cubic{
+  width: 200rpx;
+  height: 200rpx;
+  background-color: #000000;
+
+}
+
+.color-red{
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #FF0000;
+
+}
+
+.color-green{
+  background-color: #00FF00;
+
+}

@@ -1,0 +1,25 @@
+{
+  "_comment": [
+    [
+      "这是唯一合法的在json中加注释的方法",
+    "不按这个方法写注释的，会卡住没法编译",
+    "json要求所有内容都是 key:value 的形式",
+    "而且value通常都是一个array",
+    "在array中，每一个条目后面要有一个逗号",
+    "但最后一个条目不需要逗号"
+    ],
+    "pages中，谁写在第一行谁就是默认页面"
+  ],
+  "pages": [
+    "pages/index2/index2",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/index3/index3"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFFF00",
+    "navigationBarTitleText": "Marvin在路上",
+    "navigationBarTextStyle": "black"
+  }
+}
