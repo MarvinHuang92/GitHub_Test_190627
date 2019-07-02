@@ -1,0 +1,62 @@
+方案二（推荐）：
+通过编写dos下的批处理文件，也就是bat文件。这里给出一个示例，欢迎大家尝试此方案。
+使用说明：
+1、新建一个文本文件，并将后缀改为.bat，然后复制下面的代码到这个bat文件中保存。文件名随意，但请遵循python命名规则。这里用【love.bat】
+2、新建一个文本文件，并将后缀改为.py，文件名改为bat文件对应的文件名，并将新建的两个文件放在同一个目录，便于自动定位py文件。这里用【love.py】
+3、双击love.bat文件，即可自动唤出解释器执行love.py程序。此时就可以在py文件中尽情的写python代码了。
+【版本一：只执行一次py文件】
+@echo off
+set var = 0
+rem ** 该代码由【kangour Aronld】贡献，并授予网友使用和传播的权利，但请保留此部分内容声明。
+rem ** 使用本代码前，请确保.py文件与.bat文件的命名一致。
+rem ** 例如，我们用【love】给文件命名，那么只有当bat文件名为【love.bat】py文件为【love.py】时，双击love.bat文件，才能准确执行到love.py程序。
+rem ** kangour Aronld 写于2017年12月4日
+rem **
+cls
+rem ** 打印提示信息
+@echo --- Runner %date% %time% the python result %~dp0 ---
+@echo.
+rem ** 获取当前目录路径
+cd %~dp0
+rem ** 获取当前bat文件名（前缀部分）
+for /f "delims=" %%i in ("%0") do set aa=%%~ni
+set "aa=%aa%.py"
+rem ** 调用Python解释器执行
+python %aa%
+echo.
+echo.
+echo.
+pause
+如果想让系统循环执行？没问题，第二个版本中加入了循环处理，双击bat后，隔一段时间就执行一次py文件，而且时间可以自己设置。只需要更改 倒数第四行中的数字即可。该数字表示间隔多少秒。
+【版本二：循环执行py文件】
+@echo off
+set var = 0
+rem ** 该代码由【kangour Aronld】贡献，并授予网友使用和传播的权利，但请保留此部分内容声明。
+rem ** 使用本代码前，请确保.py文件与.bat文件的命名一致。
+rem ** 例如，我们用【love】给文件命名，那么只有当bat文件名为【love.bat】py文件为【love.py】时，双击love.bat文件，才能准确执行到love.py程序。
+rem ** kangour Aronld 写于2017年12月4日
+rem **
+rem ** 开始循环执行 hello.py 文件。
+rem **
+:continue
+rem ** 循环次数变量（记录执行次数）
+set /a var+=1
+cls
+rem ** 打印提示信息
+@echo --- Runner %var%'s %date% %time% the python result %~dp0 ---
+@echo.
+rem ** 获取当前目录路径
+cd %~dp0
+rem ** 获取当前bat文件名（前缀部分）
+for /f "delims=" %%i in ("%0") do set aa=%%~ni
+set "aa=%aa%.py"
+rem ** 调用Python解释器执行
+python %aa%
+echo.
+echo.
+echo.
+rem ** 延迟1秒
+choice /t 1 /d y /n >nul
+rem ** 跳转到循环开始的位置
+goto continue
+pause

@@ -1,0 +1,17 @@
+# Work-around for a bug in execnet 1.4.1
+git+https://github.com/pytest-dev/execnet.git
+
+# For running tests
+# Testing framework.
+pytest >= 2.7.3; python_version != '3.3'
+pytest >= 2.7.3,<3.3; python_version == '3.3' # pyup: ignore
+
+pytest-xdist     # Plugin allowing running tests in parallel.
+pytest-timeout   # Plugin to abort hanging tests.
+pytest-drop-dup-tests # allows specifying order without duplicates
+
+psutil <= 5.4.1 # Better subprocess alternative with implemented timeout.
+
+flake8-diff  # Check new flake8 violations on pull requests
+
+subprocess32; python_version == '2.7'

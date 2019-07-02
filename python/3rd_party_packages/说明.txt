@@ -1,0 +1,5 @@
+这里是第三方库的备份
+
+将它们复制到venv\Lib\site-packages\下面即可
+
+记得带上相应的pth文件
