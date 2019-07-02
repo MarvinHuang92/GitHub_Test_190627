@@ -18,10 +18,10 @@ return $prime
 }
 
 $MAXLIMIT = 500
-set-content -path .\result.txt -value ""
+set-content -path .\Prime_number_result.txt -value "PRIME NUMBERS FROM 2 TO $MAXLIMIT ARE"
 foreach ($i in 2..$MAXLIMIT){
 $tag = $(& check_Prime_Number($i))
 if ($tag -eq $true){
-	add-content -path .\result.txt -value "$i"
+	add-content -path .\Prime_number_result.txt -value "$i"
 	}
 }
