@@ -1,0 +1,18 @@
+在powershell中执行以下命令：
+
+最严格的：各种脚本都不能执行（最安全）
+set-executionpolicy -executionpolicy Restricted
+
+建议的：可以执行本地脚本或者远程有签名的脚本
+set-executionpolicy -executionpolicy RemoteSigned
+
+最宽松的：不太安全
+set-executionpolicy -executionpolicy unrestricted
+
+只能执行有签名的脚本（无论远程或本地）
+set-executionpolicy -executionpolicy AllSigned
+
+
+
+如果不知道现在系统是什么设置，用这个查看：
+get-executionpolicy
