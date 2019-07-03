@@ -17,7 +17,7 @@ foreach ($num_to_devide in 2..$sqrt_root){
 return $prime
 }
 
-$MAXLIMIT = 500
+$MAXLIMIT = 5000
 set-content -path .\Prime_number_result.txt -value "PRIME NUMBERS FROM 2 TO $MAXLIMIT ARE"
 foreach ($i in 2..$MAXLIMIT){
 $tag = $(& check_Prime_Number($i))
