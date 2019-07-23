@@ -1,0 +1,11 @@
+首先F7创建本地分支，然后push，生成一个remote branch
+
+然后在新的branch上做修改（比如我现在写了这个文件）
+
+==================================
+
+测试：merge本身就不会删除原来的分支
+重要：在Marvin’s branch上点击merge，是将另一个branch（master）merge到Marvin's上来
+但master本身并不变化
+
+即：先checkout到目标分支，然后选择merge的来源分支。
