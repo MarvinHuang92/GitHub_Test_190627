@@ -17,19 +17,16 @@
   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 */
-#ifndef _PYGAME_FREETYPE_H_
-#define _PYGAME_FREETYPE_H_
+#ifndef _PYGAME_FREETYPE_INTERNAL_H_
+#define _PYGAME_FREETYPE_INTERNAL_H_
 
 #define PGFT_PYGAME1_COMPAT
 #define HAVE_PYGAME_SDL_VIDEO
 #define HAVE_PYGAME_SDL_RWOPS
 
-#include "pygame.h"
 #include "pgcompat.h"
-
-#if PY3
-#   define IS_PYTHON_3
-#endif
+#include "pgplatform.h"
+#include <Python.h>
 
 #include <ft2build.h>
 #include FT_FREETYPE_H
@@ -91,11 +88,11 @@ struct freetypeinstance_;
 typedef struct {
     FT_Long font_index;
     FT_Open_Args open_args;
-} PgFontId;
+} pgFontId;
 
 typedef struct {
     PyObject_HEAD
-    PgFontId id;
+    pgFontId id;
     PyObject *path;
     int is_scalable;
 
@@ -111,27 +108,14 @@ typedef struct {
 
     struct freetypeinstance_ *freetype;  /* Personal reference */
     struct fontinternals_ *_internals;
-} PgFontObject;
+} pgFontObject;
 
-#define PgFont_IS_ALIVE(o) \
-    (((PgFontObject *)(o))->_internals != 0)
+#define pgFont_IS_ALIVE(o) \
+    (((pgFontObject *)(o))->_internals != 0)
 
-/**********************************************************
- * Module declaration
- **********************************************************/
-#define PYGAMEAPI_FREETYPE_FIRSTSLOT 0
+/* import public API */
+#include "include/pygame_freetype.h"
+
 #define PYGAMEAPI_FREETYPE_NUMSLOTS 2
 
-#ifndef PYGAME_FREETYPE_INTERNAL
-
-#define PgFont_Check(x) ((x)->ob_type == (PyTypeObject*)PgFREETYPE_C_API[0])
-#define PgFont_Type (*(PyTypeObject*)PgFREETYPE_C_API[1])
-#define PgFont_New (*(PyObject*(*)(const char*, long))PgFREETYPE_C_API[1])
-
-#define import_pygame_freetype() \
-    _IMPORT_PYGAME_MODULE(freetype, FREETYPE, PgFREETYPE_C_API)
-
-static void *PgFREETYPE_C_API[PYGAMEAPI_FREETYPE_NUMSLOTS] = {0};
-#endif /* PYGAME_FREETYPE_INTERNAL */
-
-#endif /* _PYGAME_FREETYPE_H_ */
+#endif /* ~_PYGAME_FREETYPE_INTERNAL_H_ */

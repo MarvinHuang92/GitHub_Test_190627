@@ -14,11 +14,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TK05.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Tank_Battle/TK05.py">
+      <file leaf-file-name="get_dwg_filename.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../PyAutoCAD/get_dwg_filename.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="272">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="info_fill.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../PyAutoCAD/info_fill.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="55" column="31" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="31" />
+              <folding>
+                <element signature="e#98#135#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Final1.1.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../PyAutoCAD/Final1.1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="812">
+              <caret line="51" column="32" lean-forward="true" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -34,15 +55,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>887</find>
-      <find>120</find>
-      <find>1773</find>
-      <find>500</find>
-      <find>update</find>
-      <find>last_one</find>
-      <find>delta</find>
-      <find>autopilot</find>
-      <find>target_angle</find>
       <find>while tile</find>
       <find>drops</find>
       <find>putCharInRandomRoom</find>
@@ -64,6 +76,15 @@
       <find>TankUser</find>
       <find>概率</find>
       <find>prob</find>
+      <find>path_name</find>
+      <find>part_no</find>
+      <find>atoi(dwg_name_split[len(dwg_name_split) - 2])</find>
+      <find>%(i)</find>
+      <find>DET</find>
+      <find>C.DET</find>
+      <find>CL.DET</find>
+      <find>%(DET)</find>
+      <find>read_DET(part_no)</find>
     </findStrings>
     <replaceStrings>
       <replace>420</replace>
@@ -76,6 +97,14 @@
       <replace>633</replace>
       <replace>last_pipe</replace>
       <replace>autopilot_up</replace>
+      <replace>dwg_list</replace>
+      <replace>dwg_list_file</replace>
+      <replace>part_no</replace>
+      <replace>%(part_no)</replace>
+      <replace>C.DET</replace>
+      <replace>CL.DET</replace>
+      <replace>%(read_DET(part_no))</replace>
+      <replace>DET</replace>
     </replaceStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -118,12 +147,15 @@
         <option value="$PROJECT_DIR$/temp/Compute Elastic Spokes.py" />
         <option value="$PROJECT_DIR$/Tank_Battle/TK04.py" />
         <option value="$PROJECT_DIR$/Tank_Battle/TK05.py" />
+        <option value="$PROJECT_DIR$/../PyAutoCAD/get_part_no.py" />
+        <option value="$PROJECT_DIR$/../PyAutoCAD/get_dwg_filename.py" />
+        <option value="$PROJECT_DIR$/../PyAutoCAD/info_fill.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="356" />
-    <option name="y" value="59" />
+    <option name="x" value="-67" />
+    <option name="y" value="128" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -163,7 +195,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv/Scripts/python.exe" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -183,61 +215,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.TK05">
-    <configuration name="Compute Elastic Spokes" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="py" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/temp" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/temp/Compute Elastic Spokes.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="Game" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="py" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Jonathan Harbour/chap14" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Jonathan Harbour/chap14/Game.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="TK03" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="py" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tank_Battle" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tank_Battle/TK03.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
+  <component name="RunManager" selected="Python.info_fill">
     <configuration name="TK04" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="py" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -256,7 +234,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="TK05" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="TK05" type="PythonConfigurationType" factoryName="Python">
       <module name="py" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -274,20 +252,93 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="game3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="py" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Flappy_Bird2" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Flappy_Bird2/game3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="get_dwg_filename" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="py" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../PyAutoCAD" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../PyAutoCAD/get_dwg_filename.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="get_part_no" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="py" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../PyAutoCAD" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../PyAutoCAD/get_part_no.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="info_fill" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="py" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../PyAutoCAD" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../PyAutoCAD/info_fill.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <list>
-      <item itemvalue="Python.Compute Elastic Spokes" />
-      <item itemvalue="Python.TK03" />
-      <item itemvalue="Python.Game" />
-      <item itemvalue="Python.TK04" />
       <item itemvalue="Python.TK05" />
+      <item itemvalue="Python.TK04" />
+      <item itemvalue="Python.get_part_no" />
+      <item itemvalue="Python.get_dwg_filename" />
+      <item itemvalue="Python.info_fill" />
+      <item itemvalue="Python.game3" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.TK05" />
+        <item itemvalue="Python.info_fill" />
+        <item itemvalue="Python.get_dwg_filename" />
+        <item itemvalue="Python.game3" />
+        <item itemvalue="Python.get_part_no" />
         <item itemvalue="Python.TK04" />
-        <item itemvalue="Python.TK03" />
-        <item itemvalue="Python.Game" />
-        <item itemvalue="Python.Compute Elastic Spokes" />
       </list>
     </recent_temporary>
   </component>
@@ -344,17 +395,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/EMPTYtemplate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Untitled1.py" />
-    <entry file="file://$PROJECT_DIR$/回文数2只要一行.py" />
-    <entry file="file://$PROJECT_DIR$/封装数据-隐藏性别" />
-    <entry file="file://$PROJECT_DIR$/property装饰器.py" />
     <entry file="file://$PROJECT_DIR$/类属性和实例属性的测试.py" />
     <entry file="file://$PROJECT_DIR$/EMPTYtemplate.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -541,13 +581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Flappy_Bird2/game3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Jonathan Harbour/chap09/BlockBreaker.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-880">
@@ -648,6 +681,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PyAutoCAD/get_part_no.py" />
+    <entry file="file://$PROJECT_DIR$/../PyAutoCAD/main.py" />
+    <entry file="file://$PROJECT_DIR$/Flappy_Bird2/game3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PyAutoCAD/Final1.1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="812">
+          <caret line="51" column="32" lean-forward="true" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PyAutoCAD/get_dwg_filename.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PyAutoCAD/info_fill.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="55" column="31" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="31" />
+          <folding>
+            <element signature="e#98#135#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
