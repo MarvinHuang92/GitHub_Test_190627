@@ -6,7 +6,7 @@
 
 import os
 
-file_path = "test_DWG"
+file_path = "C:\\Users\\PeterZhu\\Desktop\\SensorOP10"
 
 path_list = os.listdir(file_path)  # os.listdir(file)会历遍文件夹内的文件并返回一个列表
 # print (path_list)
@@ -29,3 +29,5 @@ for file_name in dwg_list:
     with open("dwg_list_file.txt", "a") as f:
         f.write(file_name + "\n")
         f.close()
+
+print ("File_name_list Generated")

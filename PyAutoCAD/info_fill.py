@@ -25,8 +25,8 @@ acad=Autocad(create_if_not_exists = True)
 
 # min = 10
 # max = 87
-#DWG_File_path = "C:\\Users\PeterZhu\\Desktop\\SensorOP10\\"
-DWG_File_path = "D:\\Programming\\GitHub_190628\\PyAutoCAD\\test_DWG\\"
+DWG_File_path = "C:\\Users\PeterZhu\\Desktop\\SensorOP10\\"
+#DWG_File_path = "D:\\Programming\\GitHub_190628\\PyAutoCAD\\test_DWG\\"
 
 SuccessNumber = []
 ErrorNumber = []
@@ -44,6 +44,7 @@ except:
 
 # 循环读取待修改的dwg文件
 for dwg_name in file_name_list:
+    dwg_name = dwg_name.strip()  # 从txt文件中读取行会带有回车，需要切除后再作为字符串使用
     working = True  # 初始化“工作正常”
     DET = ""  # 初始化全局变量DET
     try:
@@ -53,15 +54,17 @@ for dwg_name in file_name_list:
         except:
             print ("Invalid File Name: %s" %(dwg_name))
             working = False
+
+        # 切分文件名放进list中，并强制转换为整数
         part_no = int(dwg_name_split[len(dwg_name_split) - 2])
-        DET = read_DET(part_no)
+        DET = read_DET(part_no)  # 调用函数，让DET不再是空值
         if 0 < part_no < 1000:
-            print (part_no)
+            #print (part_no)
             try:
                 print("Open file: %s%s" %(DWG_File_path, dwg_name))
                 acad.ActiveDocument.Application.Documents.Open("%s%s" %(DWG_File_path, dwg_name))
             except:
-                print("Can not open file: #%d" %(part_no))
+                print("Can not open this file")
                 working = False
         else:
             print ("Invalid Part Number: %s" %(dwg_name))
@@ -72,7 +75,7 @@ for dwg_name in file_name_list:
         if working:
             print("Start working on Part #%s"%(DET))
 
-            try:
+            try:                
                 #获取MREVBLK块的对角线坐标
                 for obj in acad.iter_objects("AcDbBlockReference"):
                     if obj.Name == "MREVBLK":
@@ -141,10 +144,14 @@ for dwg_name in file_name_list:
 
 
             # 保存文件
-            acad.ActiveDocument.Application.Documents("%s%s" %(DWG_File_path, dwg_name)).Close()
-            print ("File Saved: Part #%s\n" %(DET))
-            SuccessNumber.append(DET)
-
+            try:
+                acad.ActiveDocument.Application.Documents(dwg_name).Close()
+                print ("File Saved: Part #%s\n" %(DET))
+                SuccessNumber.append(DET)
+            except:
+                print ("cannot save this file")
+                ErrorNumber.append(DET)
+            
         else:
             print ("Part #%s Doesn't Exist!\n" %(DET))
             UnExistNumber.append(DET)
