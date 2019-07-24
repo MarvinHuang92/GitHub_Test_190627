@@ -71,68 +71,73 @@ for dwg_name in file_name_list:
         if working:
             print("Start working on Part #%s"%(DET))
 
-            #获取MREVBLK块的对角线坐标
-            for obj in acad.iter_objects("AcDbBlockReference"):
-                if obj.Name == "MREVBLK":
-                    Point_Lower_Left=obj.GetBoundingBox()[0]
-                    Point_Upper_Right=obj.GetBoundingBox()[1]
+            try:
+                #获取MREVBLK块的对角线坐标
+                for obj in acad.iter_objects("AcDbBlockReference"):
+                    if obj.Name == "MREVBLK":
+                        Point_Lower_Left=obj.GetBoundingBox()[0]
+                        Point_Upper_Right=obj.GetBoundingBox()[1]
 
-            #获得MREVBLK边界对角线点的坐标
-            LL=APoint(Point_Lower_Left)
-            UR=APoint(Point_Upper_Right)
-            UL=APoint(LL.x,UR.y)
-            LR=APoint(UR.x,LL.y)
-            print ("Block Coordinate Read")
+                #获得MREVBLK边界对角线点的坐标
+                LL=APoint(Point_Lower_Left)
+                UR=APoint(Point_Upper_Right)
+                UL=APoint(LL.x,UR.y)
+                LR=APoint(UR.x,LL.y)
+                print ("Block Coordinate Read")
 
-            #确定文字位置和大小的缩放比例
-            Length=UL.y-LL.y
-            Scale=Length/92.07500000000059
+                #确定文字位置和大小的缩放比例
+                Length=UL.y-LL.y
+                Scale=Length/92.07500000000059
 
-            #新建图层，设定图层颜色，并设为当前图层
-            LayerObj=acad.ActiveDocument.Layers.Add("REVISIONS INFORMATION")
-            acad.ActiveDocument.ActiveLayer=LayerObj
-            ClrNum=4
-            LayerObj.color=ClrNum
-            print ("New Layer Created")
+                #新建图层，设定图层颜色，并设为当前图层
+                LayerObj=acad.ActiveDocument.Layers.Add("REVISIONS INFORMATION")
+                acad.ActiveDocument.ActiveLayer=LayerObj
+                ClrNum=4
+                LayerObj.color=ClrNum
+                print ("New Layer Created")
 
 
-            #填写各类信息
-            #1 001
-            REY="001"
-            insertPnt=APoint((UL.x)+1*Scale,(UL.y)-12*Scale)
-            height=1.125*Scale
-            textObj=acad.model.AddText(REY,insertPnt,height)
+                #填写各类信息
+                #1 001
+                REY="001"
+                insertPnt=APoint((UL.x)+1*Scale,(UL.y)-12*Scale)
+                height=1.125*Scale
+                textObj=acad.model.AddText(REY,insertPnt,height)
 
-            #2 DET-三位数零件号
-            insertPnt=APoint((UL.x)+5.8*Scale,(UL.y)-12*Scale)
-            height=1.125*Scale
-            textObj=acad.model.AddText(DET,insertPnt,height)
+                #2 DET-三位数零件号
+                insertPnt=APoint((UL.x)+5.8*Scale,(UL.y)-12*Scale)
+                height=1.125*Scale
+                textObj=acad.model.AddText(DET,insertPnt,height)
 
-            #3
-            CHANGE="Original Version"
-            insertPnt=APoint((UL.x)+15*Scale,(UL.y)-12*Scale)
-            height=1.125*Scale
-            textObj=acad.model.AddText(CHANGE,insertPnt,height)
+                #3
+                CHANGE="Original Version"
+                insertPnt=APoint((UL.x)+15*Scale,(UL.y)-12*Scale)
+                height=1.125*Scale
+                textObj=acad.model.AddText(CHANGE,insertPnt,height)
 
-            #4
-            BY="D.H_KIM"
-            insertPnt=APoint((UL.x)+33*Scale,(UL.y)-12*Scale)
-            height=0.5*Scale
-            textObj=acad.model.AddText(BY,insertPnt,height)
+                #4
+                BY="D.H_KIM"
+                insertPnt=APoint((UL.x)+33*Scale,(UL.y)-12*Scale)
+                height=0.5*Scale
+                textObj=acad.model.AddText(BY,insertPnt,height)
 
-            #4
-            CK="Y.S_JANG"
-            insertPnt=APoint((UL.x)+36.3*Scale,(UL.y)-12*Scale)
-            height=0.5*Scale
-            textObj=acad.model.AddText(CK,insertPnt,height)
+                #4
+                CK="Y.S_JANG"
+                insertPnt=APoint((UL.x)+36.3*Scale,(UL.y)-12*Scale)
+                height=0.5*Scale
+                textObj=acad.model.AddText(CK,insertPnt,height)
 
-            #5 日期
-            DATE=time.strftime("%d-%b-%y", time.localtime())  # %y表示两位数年份，%Y表示四位数
-            DATE = DATE.upper()
-            insertPnt=APoint((UL.x)+40*Scale,(UL.y)-12*Scale)
-            height=1*Scale
-            textObj=acad.model.AddText(DATE,insertPnt,height)
-            print ("Info Filled")
+                #5 日期
+                DATE=time.strftime("%d-%b-%y", time.localtime())  # %y表示两位数年份，%Y表示四位数
+                DATE = DATE.upper()
+                insertPnt=APoint((UL.x)+40*Scale,(UL.y)-12*Scale)
+                height=1*Scale
+                textObj=acad.model.AddText(DATE,insertPnt,height)
+                print ("Info Filled\nWork finished on Part #%s"%(DET))
+
+            except:
+                print ("Work NOT finished on Part #%s"%(DET))
+
 
             # 保存文件
             acad.ActiveDocument.Application.Documents("%s%s" %(DWG_File_path, dwg_name)).Close()
