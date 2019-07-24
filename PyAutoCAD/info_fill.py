@@ -21,13 +21,14 @@ def read_DET(part_no):
     # print ("read DET: #%s" %(DET))
     return DET
 
-acad=Autocad(create_if_not_exists=True)
+acad=Autocad(create_if_not_exists = True)
 
 # min = 10
 # max = 87
 #DWG_File_path = "C:\\Users\PeterZhu\\Desktop\\SensorOP10\\"
 DWG_File_path = "D:\\Programming\\GitHub_190628\\PyAutoCAD\\test_DWG\\"
 
+SuccessNumber = []
 ErrorNumber = []
 UnExistNumber = []
 file_name_list = []
@@ -142,6 +143,7 @@ for dwg_name in file_name_list:
             # 保存文件
             acad.ActiveDocument.Application.Documents("%s%s" %(DWG_File_path, dwg_name)).Close()
             print ("File Saved: Part #%s\n" %(DET))
+            SuccessNumber.append(DET)
 
         else:
             print ("Part #%s Doesn't Exist!\n" %(DET))
@@ -151,7 +153,7 @@ for dwg_name in file_name_list:
         print ("ERROR: #%s\n" %(DET))
         ErrorNumber.append(DET)
 
-        
-print ('Errors: #',ErrorNumber)
-print ('UnExists: #',UnExistNumber)
+print ("Succeeds: #", SuccessNumber)
+print ("Errors:   #", ErrorNumber)
+print ("UnExists: #", UnExistNumber)
 
