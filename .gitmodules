@@ -1,0 +1,7 @@
+[submodule "C_Submodule_1"]
+	path = C_Submodule_1
+	url = https://github.com/MarvinHuang92/C_Submodule_1.git
+
+[submodule "Python_Submodule_2"]
+	path = Python_Submodule_2
+	url = https://github.com/MarvinHuang92/Python_Submodule_2.git
