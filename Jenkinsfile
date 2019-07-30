@@ -1,5 +1,12 @@
 #!/usr/bin/env groovy Jenkinsfile
 
-node{
-	echo "Hello World!"
+pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            steps { 
+                echo 'Hello World'
+            }
+        }
+    }
 }
