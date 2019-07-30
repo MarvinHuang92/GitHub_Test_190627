@@ -1,3 +1,7 @@
-[submodule "Submodule_1"]
-	path = Submodule_1
-	url = ../Submodule_1.git
+[submodule "C_Submodule_1"]
+	path = C_Submodule_1
+	url = ../C_Submodule_1.git
+
+[submodule "Python_Submodule_2"]
+	path = Python_Submodule_2
+	url = ../Python_Submodule_2.git
