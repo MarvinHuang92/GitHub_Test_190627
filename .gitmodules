@@ -4,4 +4,4 @@
 
 [submodule "Python_Submodule_2"]
 	path = Python_Submodule_2
-	url = ../Python_Submodule_2.git
+	url = https://github.com/MarvinHuang92/Python_Submodule_2.git
