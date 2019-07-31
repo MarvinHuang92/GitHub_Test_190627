@@ -1,0 +1,3 @@
+https://blog.csdn.net/cfh0081/article/details/78540674
+
+关于解决jenkins 没有权限拉取github的问题
