@@ -126,13 +126,14 @@ while True:
         if strike_frame == -1:
             strike_frame = 0
 
-    if 0 <= strike_frame < 7:
+    if 0 <= strike_frame <= 14:
         strike_frame += 1
     else:
         strike_frame = -1
 
-    if 0 <= strike_frame <= 6:
+    if 0 <= strike_frame <= 14:
         group.add(man)
+        print('frame= ' + str(man.frame) + '; strike= ' + str(strike_frame) + '， last_frame= ' + str(man.last_frame))
     else:
         group.add(man2)
 
