@@ -1,0 +1,80 @@
+Host OS:	Windows
+ELXR: Copyright (C) 1983-2018 Green Hills Software.  All Rights Reserved.
+Release: FROZEN tri-v2018.1.5bosch-frozen-P02
+Custom String: TOOLSCL-825,1055 TOOLS-29338,29380 fix=on TOOLSCL-939,940,947,953,961,962,964,1058 fix=on checker=off
+Build Directory: [Directory] vital:/home/vital/frozen/svn/bosch201815tricore/win64-cross-linux86-comp
+Revision: [VCInfo] http://toolsvc/branches/release-branch-2018-1-bto-bosch-tricore/src@641569 (built by jy)
+Revision Date: Fri Feb 15 05:33:16 2019
+
+Release Date: Fri Feb 15 05:33:28 2019
+
+
+
+
+Load Map Mon Aug 05 19:05:06 2019
+Image Summary
+
+  Section              Base      Size(hex)    Size(dec)  SecOffs
+  .CPU0.sbst.dspr      70000000  00000100          256   0000000
+  .CPU0.ustack         70000100  00008000        32768   0000000
+  .CPU0.csa            70008100  00002000         8192   0000000
+  .CPU0.istack         7000a120  00000400         1024   0000000
+  .CPU0.data           7000a520  00000050           80   006d048
+  .CPU0.bss            7000a570  0000449c        17564   0000000
+  .CPU0.sbst.psram     70100000  00000100          256   0000000
+  .CPU0.psram_text     70100100  00000000            0   0000000
+  .CPU1.sbst.dspr      60000000  00000100          256   0000000
+  .CPU1.ustack         60000100  0000c000        49152   0000000
+  .CPU1.csa            6000c100  00002000         8192   0000000
+  .CPU1.istack         6000e120  00000400         1024   0000000
+  .CPU1.data           6000e520  00000368          872   006d098
+  .CPU1.bss            6000e888  00020208       131592   0000000
+  .CPU1.sbst.psram     60100000  00000100          256   0000000
+  .CPU1.psram_text     60100100  00000000            0   0000000
+  .CPU2.sbst.dspr      50000000  00000100          256   0000000
+  .CPU2.ustack         50000100  00001000         4096   0000000
+  .CPU2.csa            50001100  00001000         4096   0000000
+  .CPU2.istack         50002120  00000400         1024   0000000
+  .CPU2.data           50002520  00001218         4632   006d400
+  .CPU2.bss            50003738  00007b8c        31628   0000000
+  .CPU2.sbst.psram     50100000  00000100          256   0000000
+  .CPU2.psram_text     50100100  00000000            0   0000000
+  .CPU3.sbst.dspr      40000000  00000100          256   0000000
+  .CPU3.ustack         40000100  00004000        16384   0000000
+  .CPU3.csa            40004100  00001000         4096   0000000
+  .CPU3.istack         40005120  00000400         1024   0000000
+  .CPU3.data           40005520  00000000            0   0000000
+  .CPU3.bss            40005520  0000b874        47220   0000000
+  .CPU3.sbst.psram     40100000  00000100          256   0000000
+  .CPU3.psram_text     40100100  00000000            0   0000000
+  .CPU4.sbst.dspr      30000000  00000100          256   0000000
+  .CPU4.ustack         30000100  00004000        16384   0000000
+  .CPU4.csa            30004100  00002000         8192   0000000
+  .CPU4.istack         30006120  00000400         1024   0000000
+  .CPU4.data           30006520  00000000            0   0000000
+  .CPU4.bss            30006520  00000000            0   0000000
+  .CPU4.sbst.psram     30100000  00000100          256   0000000
+  .CPU4.psram_text     30100100  00000000            0   0000000
+  .CPU5.sbst.dspr      10000000  00000100          256   0000000
+  .CPU5.ustack         10000100  00000800         2048   0000000
+  .CPU5.csa            10000900  00000400         1024   0000000
+  .CPU5.istack         10000d20  00000400         1024   0000000
+  .CPU5.data           10001120  00000000            0   0000000
+  .CPU5.bss            10001120  0000d724        55076   0000000
+  .CPU5.sbst.psram     10100000  00000100          256   0000000
+  .CPU5.psram_text     10100100  00000000            0   0000000
+  .dlmu0_nc.data       b0000000  00000000            0   0000000
+  .dlmu0_nc.bss        b0000000  00002970        10608   0000000
+  .dlmu1_nc.data       b0010000  00000000            0   0000000
+  .dlmu1_nc.bss        b0010000  0000fec0        65216   0000000
+  .dlmu2_nc.data       b0020000  00000000            0   0000000
+  .dlmu2_nc.bss        b0020000  00000000            0   0000000
+  .dlmu3_nc.data       b0030000  00000000            0   0000000
+  .dlmu3_nc.bss        b0030000  00000000            0   0000000
+  .dlmu4_nc.data       b0140000  00000000            0   0000000
+  .dlmu4_nc.bss        b0140000  00000000            0   0000000
+  .dlmu5_nc.data       b0150000  00000000            0   0000000
+  .dlmu5_nc.bss        b0150000  00000000            0   0000000
+  .lmu0.bss            90040000  00000000            0   0000000
+  .lmu0.data           90040000  00000000            0   0000000
+
