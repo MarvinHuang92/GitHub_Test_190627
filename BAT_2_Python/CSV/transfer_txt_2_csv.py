@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""  Transfer Fault_h_Id.txt file into csv format for more clear view  """
+"""  Transfer Event and Behavior ID from txt file into csv format for more clear view  """
 
 
 import csv
