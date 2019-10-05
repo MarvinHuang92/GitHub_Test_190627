@@ -1,0 +1,6 @@
+properties:
+  buildDiscarder:
+      days: 5
+      num: 10
+  abortIfNotLatest: true
+sharePath: \\bosch.com\dfsrb\DfsDE\DIV\CS\DE_CS$\Workshops_and_Procedure\Transfer\deleted_after_5_days\DASY_CN\@ENV:JOB_NAME;\@ENV:BUILD_NUMBER;

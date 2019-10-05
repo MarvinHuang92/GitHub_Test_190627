@@ -1,0 +1,5 @@
+#!/usr/bin/env groovy
+
+@Library("LUCxLib@1.4.0") _
+ 
+lucx.bau(config:'jenkins/configs/release.yaml', isPath:true, debug:true) 

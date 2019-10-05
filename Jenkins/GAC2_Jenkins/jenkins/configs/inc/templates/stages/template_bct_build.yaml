@@ -1,0 +1,16 @@
+    - name: BCT BUILD VALIDATION @TPL:product;_@TPL:hw;
+      description: Bct build validation
+      executionOrder: 2
+      runIfEnvIsSet: IS_PULL_REQUEST_JOB
+      steps:
+      - cmd: BCT_Automated.bat @ENV:CHANGE_TARGET;
+        fromPath: apl_gac\tools\Jenkins\bct_build_validate   
+    - name: BCT BUILD VALIDATION(Branch) @TPL:product;_@TPL:hw;
+      description: Bct build validation in Branch
+      executionOrder: 2
+      skipIfEnvIsSet: IS_PULL_REQUEST_JOB
+      steps:
+      - cmd: BCT_Automated.bat bjev_develop
+        fromPath: apl_gac\tools\Jenkins\bct_build_validate
+     
+        

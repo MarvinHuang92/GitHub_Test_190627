@@ -1,0 +1,7 @@
+@INCLUDE:jenkins/configs/inc/properties.yaml;
+pipeline:
+  noFailFast: true 
+  nodes:
+  - @INCLUDE:jenkins/configs/inc/templates/nodes/template_cmake.yaml<product=DASY, hw=APL_GAC, submodule=>;
+    
+

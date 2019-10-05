@@ -1,0 +1,16 @@
+    - name: A2L GENERATION @TPL:product;_@TPL:hw;
+      description: A2L generation through VAST Tool 
+      executionOrder: 4
+      steps:
+      - cmd: 09_release_dir.bat @TPL:product;_@TPL:hw;
+        fromPath: apl_gac\tools\builder\cmake
+      - cmd: VAST_Create_cpp_a2l.bat @TPL:product;_@TPL:hw;
+        fromPath: apl_gac\tools\builder\cmake
+      archive:
+      - backend: jenkins
+        includes: DASY_BASE_01.a2l
+        fromPath: generatedFiles\@TPL:product;_@TPL:hw;\release\measurement\database\a2l
+        zip: true
+        zipName: GAC_DASY_A2L_@ENV:BUILD_NUMBER;.zip
+      
+        

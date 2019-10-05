@@ -1,0 +1,5 @@
+#!/usr/bin/env groovy
+
+@Library("LUCxLib@develop") _
+ 
+lucx.bau(config:params.config, isPath:false) 

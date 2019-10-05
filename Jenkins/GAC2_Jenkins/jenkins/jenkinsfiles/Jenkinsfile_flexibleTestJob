@@ -1,0 +1,23 @@
+#!/usr/bin/env groovy
+
+// check if framework version was given as job parameter
+if (params.frameworkVersion != null && params.frameworkVersion != ""){
+    // use given parameter
+    version= "LUCxLib@${params.frameworkVersion}"
+    echo("### USING GLOBAL LIBRARY -- '${version}'")
+    library version
+} else {
+    // use default
+    echo("### USING DEFAULT GLOBAL LIBRARY VERSION-- 'LUCxLib@develop'")
+    library "LUCxLib@develop"
+
+}
+
+// check if config was given as job parameter
+if (params.config != null && params.config != ""){
+    // use given config
+    lucx.bau(config:params.config, isPath:false, debug: true) 
+} else {
+    // use default
+    lucx.bau(debug: true)
+}

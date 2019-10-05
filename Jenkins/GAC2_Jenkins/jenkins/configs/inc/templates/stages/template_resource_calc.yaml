@@ -1,0 +1,14 @@
+    - name: RAM & ROM measurement @TPL:product;_@TPL:hw;
+      description: RAM and ROM @TPL:product;_@TPL:hw; measurement
+      executionOrder: 3
+      steps:
+      - cmd: resCalc_CLI.bat @TPL:product;_@TPL:hw;
+        fromPath: jenkins\MapFileAnalyser
+      -cmd: ram_rom_report.py
+        fromPath:apl_gac\tools\Jenkins\resource_calc
+      archive:
+      - backend: jenkins
+        includes: "@TPL:product;_@TPL:hw;_report.xml, *.xslt"
+        fromPath: generatedFiles\@TPL:product;_@TPL:hw;
+        zip: true
+        zipName: Resource_Calc_Report_@ENV:BUILD_NUMBER;.zip

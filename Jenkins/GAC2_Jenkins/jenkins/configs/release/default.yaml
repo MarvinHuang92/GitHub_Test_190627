@@ -1,0 +1,7 @@
+---
+@INCLUDE:jenkins/configs/inc/properties.yaml;
+pipeline:
+  nodes:
+  - @INCLUDE:jenkins/configs/inc/node_check_pr.yaml; # will only be executed if handling a PR
+    @INCLUDE:jenkins/configs/inc/templates/nodes/template_cmake_release.yaml<product=DASY, hw=APL_GAC, submodule=>;
+
