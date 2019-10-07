@@ -5,3 +5,6 @@
 [submodule "Python_Submodule_2"]
 	path = Python_Submodule_2
 	url = https://github.com/MarvinHuang92/Python_Submodule_2.git
+[submodule "CMake_Submodule_1A"]
+	path = CMake_Submodule_1A
+	url = ../CMake_Submodule_1A.git
