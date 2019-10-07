@@ -1,9 +1,0 @@
-  - description: CMake @TPL:product;_@TPL:hw;
-    executionOrder: 0
-    label: windows
-    unstash:
-    - stashName: ''
-      toPath: "."
-    stages:
-      @INCLUDE:jenkins/configs/inc/templates/stages/template_checkout.yaml<hw=@TPL:hw;, product=@TPL:product;, submodule=@TPL:submodule;>;
-      @INCLUDE:jenkins/configs/inc/templates/stages/template_CustRelease.yaml<hw=@TPL:hw;, product=@TPL:product;>;

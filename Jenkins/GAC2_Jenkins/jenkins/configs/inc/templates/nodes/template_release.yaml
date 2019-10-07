@@ -1,9 +1,0 @@
-  - description: Create Release
-    skipIfEnvIsSet: IS_PULL_REQUEST_JOB
-    executionOrder: 99
-    label: windows
-    stages:
-    - name: Checkout Release Environment
-      executionOrder: 0
-      steps:
-      - call: Repository.prepareGitRepo

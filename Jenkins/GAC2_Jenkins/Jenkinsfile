@@ -1,5 +1,0 @@
-#!/usr/bin/env groovy
-
-@Library("LUCxLib@1.14.0") _
-
-lucx.bau(debug: 'false')
