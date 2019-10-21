@@ -1,0 +1,611 @@
+
+Apache HttpComponents Client 4.x API Plugin
+Bundles Apache HttpComponents Client 4.x and allows it to be used by Jenkins plugins. 
+4.5.10-2.0
+Downgrade to 4.5.5-3.0
+
+
+
+
+
+
+Autofavorite for Blue Ocean
+Automatically favorites multibranch pipeline jobs when user is the author 
+1.2.4
+
+
+
+
+
+Bitbucket Branch Source Plugin
+Allows to use Bitbucket Cloud and Bitbucket Server as sources for multi-branch projects. It also provides the required connectors for Bitbucket Cloud Team and Bitbucket Server Project folder (also known as repositories auto-discovering). 
+2.5.0
+
+
+
+
+
+Bitbucket Pipeline for Blue Ocean
+BlueOcean Bitbucket pipeline creator 
+1.19.0
+
+
+
+
+
+Branch API Plugin
+This plugin provides an API for multiple branch based projects. 
+2.5.4
+Downgrade to 2.5.2
+
+
+
+
+
+
+Credentials Binding Plugin
+Allows credentials to be bound to environment variables for use from miscellaneous build steps. 
+1.20
+Downgrade to 1.19
+
+
+
+
+
+
+Credentials Plugin
+This plugin allows you to store credentials in Jenkins. 
+2.3.0
+Downgrade to 2.2.0
+
+
+
+
+
+
+Display URL for Blue Ocean
+This plugin generates BlueOcean specific URLs for the Display URL plugin. 
+2.3.0
+
+
+
+
+
+Docker Commons Plugin
+Provides the common shared functionality for various Docker-related plugins. 
+1.15
+
+
+
+
+
+Docker Pipeline
+Build and use Docker containers from pipelines. 
+1.20
+Downgrade to 1.18
+
+
+
+
+
+
+Durable Task Plugin
+Library offering an extension point for processes which can run outside of Jenkins yet be monitored. 
+1.30
+Downgrade to 1.29
+
+
+
+
+
+
+Events API for Blue Ocean
+Blue Ocean Events 
+1.19.0
+
+
+
+
+
+Folders Plugin
+This plugin allows users to create "folders" to organize jobs. Users can define custom taxonomies (like by project type, organization type etc). Folders are nestable and you can define views within folders. Maintained by CloudBees, Inc. 
+6.9
+Downgrade to 6.8
+
+
+
+
+
+
+Git client plugin
+Utility plugin for Git support in Jenkins
+2.9.0
+Downgrade to 2.8.6
+
+
+
+
+
+
+Git Pipeline for Blue Ocean
+BlueOcean Git SCM pipeline creator 
+1.19.0
+
+
+
+
+
+Git plugin
+This plugin integrates Git with Jenkins. 
+3.12.1
+Downgrade to 3.10.0
+
+
+
+
+
+
+GIT server Plugin
+Allows Jenkins to act as a Git server. 
+1.8
+Downgrade to 1.7
+
+
+
+
+
+
+GitHub API Plugin
+This plugin provides GitHub API for other plugins. 
+1.95
+
+
+
+
+
+GitHub Branch Source Plugin
+Multibranch projects and organization folders from GitHub. Maintained by CloudBees, Inc. 
+2.5.8
+Downgrade to 2.5.3
+
+
+
+
+
+
+GitHub Pipeline for Blue Ocean
+BlueOcean GitHub organization pipeline creator 
+1.19.0
+
+
+
+
+
+Gradle Plugin
+This plugin allows Jenkins to invoke Gradle build scripts directly. 
+1.34
+Downgrade to 1.32
+
+
+
+
+
+
+HTML Publisher plugin
+This plugin publishes HTML reports. 
+1.21
+
+
+
+
+
+Jackson 2 API
+This plugin exposes the Jackson 2 JSON APIs to other Jenkins plugins. 
+2.9.10
+Downgrade to 2.9.9
+
+
+
+
+
+
+JavaScript GUI Lib: ACE Editor bundle plugin
+JavaScript GUI Lib: ACE Editor bundle plugin. 
+1.1
+
+
+
+
+
+JavaScript GUI Lib: Handlebars bundle plugin
+JavaScript GUI Lib: Handlebars bundle plugin. 
+1.1.1
+
+
+
+
+
+JavaScript GUI Lib: jQuery bundles (jQuery and jQuery UI) plugin
+JavaScript GUI Lib: jQuery bundles (jQuery and jQuery UI) plugin. 
+1.2.1
+
+
+
+
+
+JavaScript GUI Lib: Moment.js bundle plugin
+JavaScript GUI Lib: Moment.js bundle plugin. 
+1.1.1
+
+
+
+
+
+JIRA plugin
+This plugin integrates Jenkins to Atlassian JIRA. 
+3.0.10
+
+
+
+
+
+JUnit Plugin
+Allows JUnit-format test results to be published. 
+1.28
+
+
+
+
+
+Lockable Resources
+This plugin allows to define external resources (such as printers, phones, computers) that can be locked by builds. If a build requires an external resource which is already locked, it will wait for the resource to be free. 
+2.5
+
+
+
+
+
+Mailer Plugin
+This plugin allows you to configure email notifications for build results
+1.29
+Downgrade to 1.23
+
+
+
+
+
+
+Pipeline
+A suite of plugins that lets you orchestrate automation, simple or complex. See Pipeline as Code with Jenkins for more details. 
+2.6
+
+
+
+
+
+Pipeline Graph Analysis Plugin
+Provides a REST API to access pipeline and pipeline run data. 
+1.10
+
+
+
+
+
+Pipeline implementation for Blue Ocean
+This plugin is a part of BlueOcean Plugin 
+1.19.0
+
+
+
+
+
+Pipeline SCM API for Blue Ocean
+This plugin is a part of BlueOcean Plugin 
+1.19.0
+
+
+
+
+
+Pipeline: API
+Plugin that defines Pipeline API. 
+2.37
+Downgrade to 2.34
+
+
+
+
+
+
+Pipeline: Basic Steps
+Commonly used steps for Pipelines. 
+2.18
+Downgrade to 2.16
+
+
+
+
+
+
+Pipeline: Build Step
+Adds the Pipeline step build to trigger builds of other jobs. 
+2.9
+
+
+
+
+
+Pipeline: Declarative
+An opinionated, declarative Pipeline. 
+1.3.9
+Downgrade to 1.3.8
+
+
+
+
+
+
+Pipeline: Declarative Agent API
+Replaced by Pipeline: Declarative Extension Points API plugin. 
+1.1.1
+
+
+
+
+
+Pipeline: Declarative Extension Points API
+APIs for extension points used in Declarative Pipelines. 
+1.3.9
+Downgrade to 1.3.8
+
+
+
+
+
+
+Pipeline: GitHub Groovy Libraries
+Allows Pipeline Grrovy libraries to be loaded on the fly from GitHub. 
+1.0
+
+
+
+
+
+Pipeline: Groovy
+Pipeline execution engine based on continuation passing style transformation of Groovy scripts. 
+2.74
+Downgrade to 2.69
+
+
+
+
+
+
+Pipeline: Input Step
+Adds the Pipeline step input to wait for human input or approval. 
+2.11
+Downgrade to 2.10
+
+
+
+
+
+
+Pipeline: Job
+Defines a new job type for pipelines and provides their generic user interface. 
+2.35
+Downgrade to 2.32
+
+
+
+
+
+
+Pipeline: Milestone Step
+Plugin that provides the milestone step
+1.3.1
+
+
+
+
+
+Pipeline: Model API
+Model API for Declarative Pipeline. 
+1.3.9
+Downgrade to 1.3.8
+
+
+
+
+
+
+Pipeline: Multibranch
+Enhances Pipeline plugin to handle branches better by automatically grouping builds from different branches. 
+2.21
+
+
+
+
+
+Pipeline: Nodes and Processes
+Pipeline steps locking agents and workspaces, and running external processes that may survive a Jenkins restart or slave reconnection. 
+2.34
+Downgrade to 2.30
+
+
+
+
+
+
+Pipeline: REST API Plugin
+Provides a REST API to access pipeline and pipeline run data. 
+2.12
+Downgrade to 2.11
+
+
+
+
+
+
+Pipeline: SCM Step
+Adds a Pipeline step to check out or update working sources from various SCMs (version control). 
+2.9
+Downgrade to 2.7
+
+
+
+
+
+
+Pipeline: Shared Groovy Libraries
+Shared libraries for Pipeline scripts. 
+2.15
+Downgrade to 2.13
+
+
+
+
+
+
+Pipeline: Stage Step
+Adds the Pipeline step stage to delineate portions of a build. 
+2.3
+
+
+
+
+
+Pipeline: Stage Tags Metadata
+Library plugin for Pipeline stage tag metadata. 
+1.3.9
+Downgrade to 1.3.8
+
+
+
+
+
+
+Pipeline: Stage View Plugin
+Pipeline Stage View Plugin. 
+2.12
+Downgrade to 2.11
+
+
+
+
+
+
+Pipeline: Step API
+API for asynchronous build step primitive. 
+2.20
+Downgrade to 2.19
+
+
+
+
+
+
+Pipeline: Supporting APIs
+Common utility implementations to build Pipeline Plugin 
+3.3
+
+
+
+
+
+Plain Credentials Plugin
+Allows use of plain strings and files as credentials. 
+1.5
+
+
+
+
+
+Pub-Sub "light" Bus
+A simple Publish-Subscribe light-weight event bus for Jenkins 
+1.13
+
+
+
+
+
+REST API for Blue Ocean
+This plugin is a part of Blue Ocean UI 
+1.19.0
+
+
+
+
+
+REST Implementation for Blue Ocean
+This plugin is a part of Blue Ocean UI 
+1.19.0
+
+
+
+
+
+SCM API Plugin
+This plugin provides a new enhanced API for interacting with SCM systems. 
+2.6.3
+Downgrade to 2.4.1
+
+
+
+
+
+
+Script Security Plugin
+Allows Jenkins administrators to control what in-process scripts can be run by less-privileged users. 
+1.66
+Downgrade to 1.60
+
+
+
+
+
+
+Structs Plugin
+Library plugin for DSL plugins that need names for Jenkins objects. 
+1.20
+Downgrade to 1.19
+
+
+
+
+
+
+Subversion Plug-in
+
+2.12.2
+Downgrade to 2.12.1
+
+
+
+
+
+
+Timestamper
+Adds timestamps to the Console Output
+1.10
+Downgrade to 1.9
+
+
+
+
+
+
+Token Macro Plugin
+This plug-in adds reusable macro expansion capability for other plug-ins to use. 
+2.8
+Downgrade to 2.7
+
+
+
+
+
+
+Workspace Cleanup Plugin
+This plugin deletes the project workspace when invoked. 
+0.37
+
