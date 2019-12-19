@@ -13,3 +13,6 @@
 [submodule "Jenkins_Pipeline"]
 	path = Jenkins_Pipeline
 	url = https://github.com/MarvinHuang92/Jenkins_Pipeline.git
+[submodule "ip_vmc"]
+	path = ip_vmc
+	url = git@github.com:MarvinHuang92/submodule_test_1.git
