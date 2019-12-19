@@ -5,3 +5,11 @@
 [submodule "Python_Submodule_2"]
 	path = Python_Submodule_2
 	url = https://github.com/MarvinHuang92/Python_Submodule_2.git
+	
+[submodule "CMake_Submodule_1A"]
+	path = CMake_Submodule_1A
+	url = https://github.com/MarvinHuang92/CMake_Submodule_1A.git
+
+[submodule "Jenkins_Pipeline"]
+	path = Jenkins_Pipeline
+	url = https://github.com/MarvinHuang92/Jenkins_Pipeline.git
