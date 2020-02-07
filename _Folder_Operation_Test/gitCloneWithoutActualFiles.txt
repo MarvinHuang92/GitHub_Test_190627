@@ -1,0 +1,7 @@
+https://stackoverflow.com/questions/37684028/how-to-clone-fetch-a-repo-getting-only-the-history
+https://stackoverflow.com/questions/36547904/git-clone-without-objects-to-do-git-log
+
+
+https://exp.newsmth.net/topic/3a17245ea824278b1ff12760bbc1faf2
+
+https://stackoverflow.com/questions/600079/how-do-i-clone-a-subdirectory-only-of-a-git-repository
