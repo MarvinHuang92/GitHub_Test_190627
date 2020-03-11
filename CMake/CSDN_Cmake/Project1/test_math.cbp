@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="test_math"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/Cmake/Project1"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/Cmake/MinGW/bin/mingw32-make.exe -f &quot;D:/Cmake/Project1/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/Cmake/MinGW/bin/mingw32-make.exe -f &quot;D:/Cmake/Project1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Cmake/MinGW/bin/mingw32-make.exe -f &quot;D:/Cmake/Project1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Cmake/MinGW/bin/mingw32-make.exe -f &quot;D:/Cmake/Project1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run">
+				<Option output="D:/Cmake/Project1/run.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Cmake/Project1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/Cmake/Project1/include"/>
+					<Add directory="d:\cmake\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="d:\cmake\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="d:\cmake\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="d:\cmake\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="d:\cmake\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="d:\cmake\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="d:\cmake\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/Cmake/MinGW/bin/mingw32-make.exe -f &quot;D:/Cmake/Project1/Makefile&quot;  VERBOSE=1 run"/>
+					<CompileFile command="D:/Cmake/MinGW/bin/mingw32-make.exe -f &quot;D:/Cmake/Project1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Cmake/MinGW/bin/mingw32-make.exe -f &quot;D:/Cmake/Project1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Cmake/MinGW/bin/mingw32-make.exe -f &quot;D:/Cmake/Project1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run/fast">
+				<Option output="D:/Cmake/Project1/run.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Cmake/Project1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/Cmake/Project1/include"/>
+					<Add directory="d:\cmake\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="d:\cmake\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="d:\cmake\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="d:\cmake\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="d:\cmake\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="d:\cmake\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="d:\cmake\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/Cmake/MinGW/bin/mingw32-make.exe -f &quot;D:/Cmake/Project1/Makefile&quot;  VERBOSE=1 run/fast"/>
+					<CompileFile command="D:/Cmake/MinGW/bin/mingw32-make.exe -f &quot;D:/Cmake/Project1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Cmake/MinGW/bin/mingw32-make.exe -f &quot;D:/Cmake/Project1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Cmake/MinGW/bin/mingw32-make.exe -f &quot;D:/Cmake/Project1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/Cmake/Project1"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/Cmake/MinGW/bin/mingw32-make.exe -f &quot;D:/Cmake/Project1/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/Cmake/MinGW/bin/mingw32-make.exe -f &quot;D:/Cmake/Project1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Cmake/MinGW/bin/mingw32-make.exe -f &quot;D:/Cmake/Project1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Cmake/MinGW/bin/mingw32-make.exe -f &quot;D:/Cmake/Project1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/Cmake/Project1"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/Cmake/MinGW/bin/mingw32-make.exe -f &quot;D:/Cmake/Project1/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/Cmake/MinGW/bin/mingw32-make.exe -f &quot;D:/Cmake/Project1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Cmake/MinGW/bin/mingw32-make.exe -f &quot;D:/Cmake/Project1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Cmake/MinGW/bin/mingw32-make.exe -f &quot;D:/Cmake/Project1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/Cmake/Project1/src/a.c">
+			<Option target="run"/>
+		</Unit>
+		<Unit filename="D:/Cmake/Project1/src/main.c">
+			<Option target="run"/>
+		</Unit>
+		<Unit filename="D:/Cmake/Project1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
