@@ -1,0 +1,16 @@
+Completed!
+=======================
+Running...
+Open file: SH-TL101823-DET-002-001.dwg
+Can not open this file
+Part #002 Doesn't Exist!
+Open file: SH-TL101823-DET-003-001.dwg
+Can not open this file
+Part #003 Doesn't Exist!
+Open file: SH-TL101823-DET-004-001.dwg
+Can not open this file
+Part #004 Doesn't Exist!
+Open file: SH-TL101823-DET-008-001.dwg
+Can not open this file
+Part #008 Doesn't Exist!
+ErrorNumber:
