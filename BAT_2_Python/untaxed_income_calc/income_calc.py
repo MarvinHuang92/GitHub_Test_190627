@@ -57,6 +57,9 @@ while True:
     elif taxed_income < 0:
         break
     avg, i, discount = income_before_tax_calc(taxed_income)
+    # 对结果进行经验修正
+    avg_orig = avg
+    avg = 0.9119 * avg + 993.84
     print('================================================')
     if i >= 500:
         print('calc out of time!')
@@ -65,4 +68,5 @@ while True:
         print('income_ after_tax: %.2f' %taxed_income)
         print('tax:               %.2f ; %.1f%%' %((avg - taxed_income), ((avg - taxed_income) / avg * 100)))
         print('tax discount:      %d' % discount)
+        print('original_calc:     %.2f (Just for Debugging)' %avg_orig)
     print('================================================\n')
