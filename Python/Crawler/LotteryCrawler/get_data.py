@@ -11,7 +11,7 @@ def get_data(target_url):
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.146 Safari/537.36'
     }
     # 例子的url
-    # url = 'http://www.js-lottery.com/Article/news/group_id/3/article_id/89574.html' # 目标网页
+    # url = 'https://www.js-lottery.com/Article/news/group_id/3/article_id/91912.html' # 目标网页
     url = 'http://www.js-lottery.com' + target_url
     # 利用requests对象的get方法，对指定的url发起请求，该方法会返回一个Response对象
     res = requests.get(url, headers=headers)
