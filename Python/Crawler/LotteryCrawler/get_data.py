@@ -60,6 +60,7 @@ def get_data(target_url):
 
     # 提取关键信息，写入dict
     data = {}
+    data['current_url'] = url
     data['batch_no'] = re.findall(r"中国体育彩票江苏省7位数第(.+?)期开奖公告", batch_num_str)[0]
     data['date'] = re.findall(r"开奖日期：(.+?)日", date_line_str)[0] + '日'
     # 如果直接搜不到，就简单截取最后13个字符（7个数字+6个空格）
