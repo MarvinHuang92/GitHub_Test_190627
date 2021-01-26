@@ -7,37 +7,36 @@ __author__ = 'Marvin Huang'
 import os, get_data, calc_prize
 from lottery_config import *
 
-
 # 检查历史记录是否存在
-# content = []
-# history_read = False
-# counter = 0
-# if os.path.exists('history.ini'):
-    # print('读取历史记录...\n')
-    # with open('history.ini') as f:
-        # content = f.readlines()
-        # f.close()
-    # try:
-        # starting_url = '/' + content[-3].strip('http://www.js-lottery.com')
-        # print('Last History URL: %s' % starting_url)
-        # for line in content:
-            # if counter > 2:
-                # counter = 0
-            # elif counter == 1:
-                # print(line.strip())
-            # counter += 1
-        # history_read = True
-    # except IndexError:
-        # print('历史记录文件格式错误\n')
-        # content = []
-        # starting_url = default_url
-        # history_read = False
-# else:
-    # print('未找到历史记录\n')
-    # starting_url = default_url
+content = []
+history_read = False
+counter = 0
+if os.path.exists('history.ini'):
+    print('读取历史记录...\n')
+    with open('history.ini') as f:
+        content = f.readlines()
+        f.close()
+    try:
+        starting_url = '/' + content[-3].strip('http://www.js-lottery.com')
+        print('Last History URL: %s' % starting_url)
+        for line in content:
+            if counter > 2:
+                counter = 0
+            elif counter == 1:
+                print(line.strip())
+            counter += 1
+        history_read = True
+    except IndexError:
+        print('历史记录文件格式错误\n')
+        content = []
+        starting_url = default_url
+        history_read = False
+else:
+    print('未找到历史记录\n')
+    starting_url = default_url
 
 # 运行爬虫
-# current_data = get_data.get_data(starting_url)
+current_data = get_data.get_data(starting_url)
 while True:
     # 如果正确读取了历史记录，则跳过最后一次记录的结果
     if not history_read:

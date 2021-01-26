@@ -73,6 +73,3 @@ def calc_prize(buy_num, lottery_num):
         report += ('共' + str(account) + '元')
 
     return report
-
-# 测试
-print(calc_prize(buy_num=[2, 0, 2, 1, 7, 0, 9], lottery_num=[5, 6, 5, 6, 3, 0, 4]))
