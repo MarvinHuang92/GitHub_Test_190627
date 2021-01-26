@@ -75,4 +75,4 @@ def calc_prize(buy_num, lottery_num):
     return report
 
 # 测试
-print(calc_prize(buy_num=[2, 0, 2, 1, 7, 0, 9], lottery_num=[5, 0, 7, 4, 3, 7, 14]))
+print(calc_prize(buy_num=[2, 0, 2, 1, 7, 0, 9], lottery_num=[5, 6, 5, 6, 3, 0, 4]))
