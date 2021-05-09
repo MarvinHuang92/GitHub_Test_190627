@@ -17,7 +17,14 @@ if os.path.exists('history.ini'):
         content = f.readlines()
         f.close()
     try:
-        starting_url = '/' + content[-3].strip('http://www.js-lottery.com')
+        # 这个是以前的，已经过期
+        # starting_url = '/' + content[-3].strip('http://www.js-lottery.com')
+        
+        # 这个是现在的，但不知道为什么不好用
+        # starting_url = '/cms/post-' + content[-3].strip('http://www.js-lottery.com')
+        
+        # 这个很奇怪，格式不对但却能用
+        starting_url = '/' + content[-3]
         print('Last History URL: %s' % starting_url)
         for line in content:
             if counter > 2:
