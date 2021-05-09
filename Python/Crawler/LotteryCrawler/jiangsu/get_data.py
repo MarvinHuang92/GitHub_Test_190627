@@ -20,11 +20,11 @@ def get_data(target_url):
 
     # 将res.text从一整个str拆分成单行
     text_list = res.text.split('\n')
-    # 搜索其中带有关键信息的行
-    batch_num = '<h1><font style="color: #FF0000;font-size:25px;"><font style="color: #000000;">'
-    date_line = '&nbsp;开奖日期'
-    lottery_num_line = '&nbsp;本期开奖号码'
-    end_line = '<div class="last">上一篇：<a'    # 注意这里实际是找它的下一行
+    # 搜索其中带有关键信息的行号
+    batch_num = '    <title> 中国体育彩票江苏省7位数第'
+    date_line = '<p>开奖日期'
+    lottery_num_line = '<br/>本期开奖号码'
+    end_line = '<div style="padding:10px 0px 10px 0px;">上一篇'
     found_lines = 0
     batch_num_index = -1
     date_line_index = -1
@@ -44,9 +44,10 @@ def get_data(target_url):
                 lottery_num_line_index = i
                 found_lines += 1
             if re.search(end_line, text_list[i]) is not None:
-                end_line_index = i + 1  # 注意这里实际是找它的下一行
+                end_line_index = i  # 更新：不再找它的下一行
+                # end_line_index = i + 1  # 注意这里实际是找它的下一行
                 found_lines += 1
-        else:  # 如果三个关键行都找到了，就停止查找
+        else:  # 如果四个关键行都找到了，就停止查找
             break
 
     batch_num_str = text_list[batch_num_index]
@@ -65,7 +66,7 @@ def get_data(target_url):
     data['date'] = re.findall(r"开奖日期：(.+?)日", date_line_str)[0] + '日'
     # 如果直接搜不到，就简单截取最后13个字符（7个数字+6个空格）
     try:
-        data['lottery_num'] = re.findall(r"本期开奖号码：(.+?) <br/></p><table style=", date_line_str)[0]
+        data['lottery_num'] = re.findall(r"本期开奖号码：(.+?)<br/>", date_line_str)[0]
     except IndexError:
         data['lottery_num'] = lottery_num_line_str.strip()[-13:]
     # 将字符串形式的开奖号码转换成list
@@ -75,7 +76,7 @@ def get_data(target_url):
     data['lottery_num'] = lottery_num_int_list
     # 最后一期开奖页面找不到这一行，会报错IndexError
     try:
-        data['next_url'] = re.findall(r'href="(.+?)"><font style', end_line_str)[0]
+        data['next_url'] = re.findall(r'<a href="(.+?)">中国体育彩票', end_line_str)[0]
     except IndexError:
         pass
 
