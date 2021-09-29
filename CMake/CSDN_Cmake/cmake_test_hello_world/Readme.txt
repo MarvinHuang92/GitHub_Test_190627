@@ -15,7 +15,7 @@ make命令的本质是代替你输入一个稍微复杂的命令：cc hello.c -o
 ======================================================
 
 
-01Cmake
+00Cmake
 主要参考：https://blog.csdn.net/kai_zone/article/details/82656964
 主要参考2：https://blog.csdn.net/afei__/article/details/81201039
 ======================================================
