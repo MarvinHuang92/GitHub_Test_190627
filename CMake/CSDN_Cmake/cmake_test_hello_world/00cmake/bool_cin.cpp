@@ -8,6 +8,6 @@ int main2() {
     cin >> flag;
     cout << "Flag = " << flag << endl;
 
-    system("pause");
+    // system("pause");
     return 0;
 }
