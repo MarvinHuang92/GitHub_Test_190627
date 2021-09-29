@@ -9,5 +9,6 @@ int main2() {
     cout << "Flag = " << flag << endl;
 
     // system("pause");
+    getchar();
     return 0;
 }

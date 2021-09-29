@@ -15,10 +15,6 @@ SET(CMAKE_SYSTEM_NAME Windows)
 set(CMAKE_SHARED_LIBRARY_LINK_C_FLAGS "")
 set(CMAKE_SHARED_LIBRARY_LINK_CXX_FLAGS "")
 
-# SET(CMAKE_MAKE_PROGRAM "mingw32-make")
-# SET(CMAKE_C_COMPILER "./gcc.exe")
-# SET(CMAKE_CXX_COMPILER "./g++.exe")
-
 #项目名称
 PROJECT(HELLO)
 # SET(CMAKE_EXECUTABLE_SUFFIX .exe)
@@ -32,4 +28,5 @@ ADD_EXECUTABLE(hello ${SRC_LIST})
 #添加宏定义
 ADD_DEFINITIONS(-DADD_DEFINITION)
 
-
+#添加此定义，防止出现 “找不到libstdc++-6.dll,无法继续执行代码.” 的报错
+set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
