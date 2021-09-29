@@ -2,10 +2,12 @@
 
 @REM cmake install path:
 set PATH="C:\TCC\Tools\cmake\3.12.1_WIN32\bin";%PATH%
+set PATH="D:\Programming\Cmake\bin\bin";%PATH%
 
 @REM compiler (g++, gcc) install path:
 @REM set PATH="C:\TCC\Tools\selena_environment\0.1.7_WIN64\MSYS\mingw64\bin";%PATH%
 set PATH="C:\TCC\Tools\mingw64\5.4.0_WIN64\bin";%PATH%
+set PATH="D:\Programming\Cmake\MinGW\bin";%PATH%
 
 echo Cleaning Old Build...
 if exist build rd /S /Q build
@@ -17,7 +19,7 @@ echo Running CMAKE...
 echo.
 @REM 可以用-D的形式直接定义缺少的参数，具体的值可以参考已有的项目编译结果中的 CmakeCache.txt
 @REM 需要完整路径，而不是仅仅 mingw32-make.exe，否则会报错 compiler broken
-set MAKE_EXE=C:/TCC/Tools/mingw64/5.4.0_WIN64/bin/mingw32-make.exe
+set MAKE_EXE=D:/Programming/Cmake/MinGW/bin/mingw32-make.exe
 if exist C:\TCC\Tools\mingw64\5.4.0_WIN64\bin set MAKE_EXE=C:/TCC/Tools/mingw64/5.4.0_WIN64/bin/mingw32-make.exe
 
 @REM 需要增加 -G "MinGW Makefiles"参数，否则会默认调用 Visual Studio Generator 生成 sln 项目文件
