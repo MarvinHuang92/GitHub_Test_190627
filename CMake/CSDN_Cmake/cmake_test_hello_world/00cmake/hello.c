@@ -1,7 +1,7 @@
 //hello.c
 #include <stdio.h>
 
-int main(){
+int hello(){
  puts("hello, world!");
  
  # ifdef ADD_DEFINITION
