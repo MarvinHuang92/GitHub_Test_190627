@@ -96,7 +96,7 @@ int multiply_table () {
 }
 
 
-int main () {
+int main0 () {
     multiply_table();
 
     system("pause");  // System: send a DOS command, which requires including stdlib.h
