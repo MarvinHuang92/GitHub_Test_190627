@@ -1,4 +1,4 @@
-//hello.c
+//s00_hello.c
 #include <stdio.h>
 
 int hello(){

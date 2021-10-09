@@ -1,4 +1,4 @@
-//bool_cin.cpp
+//s01_bool_cin.cpp
 
 #include <iostream>
 #include <stdlib.h>
@@ -96,7 +96,7 @@ int multiply_table () {
 }
 
 
-int main0 () {
+int main1 () {
     multiply_table();
 
     system("pause");  // System: send a DOS command, which requires including stdlib.h
