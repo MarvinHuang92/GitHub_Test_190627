@@ -92,8 +92,100 @@ int pointer_for_array ()
     cout << "2nd item address: " << p1 << endl;
 }
 
-int main () {
-    pointer_for_array();
+// p62 - 传值和传址
+// 两个函数的对比，第一个是普通的传值，形参不影响实参；第二个是传递地址（形参是指针）函数会直接对与实参进行操作
+void swap_1 (int a, int b)
+{
+    int temp = 0;
+    temp = a;
+    a = b;
+    b = temp;
+
+    cout << "swap_1 a = " << a << endl;
+    cout << "swap_1 b = " << b << endl;
+}
+
+void swap_2 (int * p0, int * p1)
+{
+    int temp = 0;
+    temp = *p0;
+    *p0 = *p1;
+    *p1 = temp;
+
+    cout << "swap_2 a = " << *p0 << endl;
+    cout << "swap_2 b = " << *p1 << endl;
+}
+
+void external_swap ()
+{
+    int a = 10;
+    int b = 20;
+    swap_1(a, b);
+    cout << "external a = " << a << endl;
+    cout << "external b = " << b << endl;
+
+    swap_2(&a, &b);
+    cout << "external a = " << a << endl;
+    cout << "external b = " << b << endl;
+}
+
+// P63 - 封装一个函数实现数组的冒泡排序
+// 和之前的不同是：这个数组是定义在函数之外，作为参数传递进来的
+//用于打印array的内部函数
+void printArray(int * arr, int length)
+{
+    for (int i=0; i< length; i++)
+    {
+        cout << arr[i] << endl;
+    }
+}
+
+//用于排序的内部函数
+void array_bubble_sorting_with_address_parse (int * arr, int length) // 这个指针是数组的首地址
+{
+    //如果试图在函数内部获取数组长度，这样是不行的，这样得到的是2（指针本身长度8/int类型的长度4）
+    //所以需要在外部传入数组的长度
+    // int length = sizeof(arr) / sizeof(arr[0]);
+    // cout << "length of array: " << length << endl;
+
+    //开始排序
+    int temp = 0;
+    for (int i=0; i<length; i++)
+    {
+        for (int j=0; j<length-i; j++)
+        {
+            if (arr[j]>arr[j+1])
+            {
+                temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+}
+
+//外部函数
+void external_array_bubble_sorting_with_address_parse ()
+{
+    int arr[10] = {250, 350, 400, 750, 600, 900, 120, 95, 0, 520};
+    //首先获取数组的长度
+    int length = sizeof(arr) / sizeof(arr[0]);
+    cout << "length of array: " << length << endl;
+
+    //首先打印数组一次
+    cout << "\narray before sorting" << endl;
+    printArray(arr, length);
+
+    //排序
+    array_bubble_sorting_with_address_parse (arr, length);
+
+    //结束后再打印数组一次
+    cout << "\narray after sorting" << endl;
+    printArray(arr, length);
+}
+
+int main4 () {
+    external_array_bubble_sorting_with_address_parse ();
 
     system("pause");  // System: send a DOS command, which requires including stdlib.h
     return 0;
