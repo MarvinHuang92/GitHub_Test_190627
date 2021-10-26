@@ -70,9 +70,68 @@ void defStructPointer()
 
 }
 
+// P67 - 结构体嵌套
+void StructNesting()
+{
+    // 这里借用了P64里面定义的结构体
+    struct Student s1 = {"Alice", 18, 100};
+    struct Student s2 = {"Susan", 15, 99};
 
-int main () {
-    defStructPointer ();
+    // 定义外层结构体 teacher
+    struct Teacher {
+        string name;
+        int id;
+        int age;
+        struct Student stu1;  // 其中的一个成员是另一个结构体，这里的 struct Student 相当于自定义的数据类型
+        struct Student stu2;
+    };
+
+    struct Teacher t1 = {"LaoWang", 10000, 50, s1, s2};
+
+    cout << t1.name << "\t" << t1.stu1.name << "\t" << t1.stu2.name << endl;  // 调用内层结构体就多加几个.即可
+
+    // 可以重新赋值
+    t1.stu1.score = 200;
+    t1.stu2.score = 300;
+
+    cout << t1.stu1.score << "\t" << t1.stu2.score << endl;
+
+}
+
+// P67 - 结构体作为函数参数
+// 定义函数，参数是一个结构体，函数打印参数的所有信息
+// 函数1：值传递
+void PrintAllInfoOfStruct1 (struct Student s)
+{
+    cout << s.name << endl;
+    cout << s.age << endl;
+    cout << s.score << endl;
+
+}
+
+// 函数2：地址传递，函数定义时用指针接收参数（形参）
+/* 形参用指针，实参用地址 */
+void PrintAllInfoOfStruct2 (struct Student * p)
+{
+    cout << p->name << endl;
+    cout << p->age << endl;
+    cout << p->score << endl;
+
+}
+
+void StructAsAttribute()
+{
+    // 这里借用了P64里面定义的结构体
+    struct Student s1 = {"Alice", 18, 100};
+    struct Student s2 = {"Susan", 15, 99};
+
+    PrintAllInfoOfStruct1(s1);
+    PrintAllInfoOfStruct2(&s2);  // 函数调用时传递地址（实参）
+}
+
+
+int main5 () {
+    StructAsAttribute ();
 
     system("pause");  // System: send a DOS command, which requires including stdlib.h
     return 0;

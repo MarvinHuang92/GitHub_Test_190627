@@ -20,7 +20,17 @@ PROJECT(HELLO)
 SET(CMAKE_EXECUTABLE_SUFFIX .exe)
 
 #把当前目录(.)下所有源代码文件和头文件加入变量SRC_LIST
-AUX_SOURCE_DIRECTORY(. SRC_LIST)
+# AUX_SOURCE_DIRECTORY(src00/. SRC_LIST)
+AUX_SOURCE_DIRECTORY(src01/. SRC_LIST)
+
+#设置文件编码
+    # for MSVS compiler
+    # add_compile_options("$<$<C_COMPILER_ID:MSVC>:/source-charset:utf-8>")
+    # add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/source-charset:utf-8>")
+
+    # for GCC
+    add_compile_options("-fexec-charset=GBK")       # 源代码字符集：GBK
+    add_compile_options("-finput-charset=UTF-8")    # 目标显示字符集：UTF-8
 
 #生成应用程序 hello (在windows下会自动生成hello.exe)
 ADD_EXECUTABLE(hello ${SRC_LIST})
@@ -30,3 +40,4 @@ ADD_DEFINITIONS(-DADD_DEFINITION)
 
 #添加此定义，防止出现 “找不到libstdc++-6.dll,无法继续执行代码.” 的报错
 set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
+
