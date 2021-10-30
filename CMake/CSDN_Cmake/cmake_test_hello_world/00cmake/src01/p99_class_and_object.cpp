@@ -139,18 +139,6 @@ void Cube_instance ()
     }
 }
 
-// P105 - 判断点和圆的关系
-/* 语言描述下即可：
-需要点类，和圆类（可以复用上面的，但需要增加一个属性，圆心）
-圆心也是一个点（点类的一个实例）
-
-需要几种方法：
-点类: setX(int x) setY(int y)
-圆类：setCenter(class Point &p) setRadius(int r)
-     getDistance(&p1, &p2)
-     isPointInCircle(center, radius)
-
-注意这里的p用的是引用方式传递，可以节约一个内存地址
 
 
 
@@ -158,7 +146,7 @@ void Cube_instance ()
 
 
 
-int main () {
+int main_99 () {
     // 是否需要显示中文？
     bool ChineseDisplay = true;
     // bool ChineseDisplay = false;

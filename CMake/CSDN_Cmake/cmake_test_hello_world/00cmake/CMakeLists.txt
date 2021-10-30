@@ -19,9 +19,12 @@ set(CMAKE_SHARED_LIBRARY_LINK_CXX_FLAGS "")
 PROJECT(HELLO)
 SET(CMAKE_EXECUTABLE_SUFFIX .exe)
 
-#把当前目录(.)下所有源代码文件和头文件加入变量SRC_LIST
-# AUX_SOURCE_DIRECTORY(src00/. SRC_LIST)
-AUX_SOURCE_DIRECTORY(src01/. SRC_LIST)
+#把当前目录(.)下所有源代码文件和头文件加入变量SRC_LIST，不含子目录
+# AUX_SOURCE_DIRECTORY(. SRC_LIST)
+# AUX_SOURCE_DIRECTORY(src00 SRC_LIST)
+AUX_SOURCE_DIRECTORY(src01 SRC_LIST)
+#如果有子目录，需要设置不同的名字，并在 ADD_EXECUTABLE 中加入相应的名字
+# AUX_SOURCE_DIRECTORY(src01/p105_circle_center SRC_LIST_105)
 
 #设置文件编码
     # for MSVS compiler
@@ -33,6 +36,7 @@ AUX_SOURCE_DIRECTORY(src01/. SRC_LIST)
     add_compile_options("-finput-charset=UTF-8")    # 目标显示字符集：UTF-8
 
 #生成应用程序 hello (在windows下会自动生成hello.exe)
+# ADD_EXECUTABLE(hello ${SRC_LIST} ${SRC_LIST_105})
 ADD_EXECUTABLE(hello ${SRC_LIST})
 
 #添加宏定义
