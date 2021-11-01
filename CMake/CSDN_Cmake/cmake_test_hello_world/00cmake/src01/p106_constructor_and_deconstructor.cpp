@@ -1,4 +1,4 @@
-// p106_constructor_and_deconstructor
+// p106_constructor_and_deconstructor.cpp
 
 #include <iostream>
 #include <stdlib.h>
@@ -119,6 +119,122 @@ void test01 ()
 具体看上面代码中的 重载-拷贝构造函数
 */
 
+// P111 - 初始化列表
+// 传统方式的初始化：在构造函数中进行 (有参的构造函数)
+class Person_2 {
+    public:
+    int m_a;
+    int m_b;
+    int m_c;
+
+    public:
+    // 利用有参构造函数初始化【传统方法】
+    // Person_2 (int a, int b, int c)
+    // {
+    //     m_a = a;
+    //     m_b = b;
+    //     m_c = c;
+    // }
+
+    // 利用参数列表初始化【新方法】
+    // 但有个局限：如果下面三个参数是private会无法初始化
+    Person_2(int a, int b, int c): m_a(a), m_b(b), m_c(c)
+    {
+        // Do nothing here
+    }
+};
+
+void test02 ()
+{
+    Person_2 p20(10, 20, 30);
+
+    cout << p20.m_a << p20.m_b << p20.m_c << endl;
+
+    system("pause");
+}
+
+// P112 - 对象成员（一个类成员是另一个类的对象）
+class Phone
+{
+public:
+    string ph_name;
+    float ph_size;
+    
+    // 构造函数
+    Phone(string name, float size): ph_name(name), ph_size(size) 
+    {
+        cout << "Phone 构造函数被调用" << endl;
+    }
+};
+
+class Person_3
+{
+public:
+    /* data */
+    string m_name;
+    Phone m_phone;
+public:
+    // 构造函数，其中的两个参数和Phone类构造函数中的两个参数相对应
+    // 这里省略了一次隐式转换： Phone m_phone = ph_name, ph_size； 创建了一个Phone实例，但它没有自己的名字
+    Person_3(string person_name, string ph_name, float ph_size):m_name(person_name), m_phone(ph_name, ph_size) 
+    {
+        cout << "Person_3 构造函数被调用" << endl;
+    }
+};
+
+// Phone类是Person_3的成员属性，因此先构建Phone（内部类），再构造Person（外部类）；析构的顺序反过来
+void test03 ()
+{
+    Person_3 p30("Alice", "HUAWEI P30", 6.5);
+
+    cout << p30.m_name << endl; 
+    cout << p30.m_phone.ph_name << endl;
+    cout << p30.m_phone.ph_size << endl;
+
+    system("pause");
+}
+
+// P112.5 - 缺少的一集： https://www.bilibili.com/video/BV1h7411e7wk?from=search&seid=7200463635805732693&spm_id_from=333.788.b_636f6d6d656e74.30
+// 静态成员变量
+// P113 - 静态成员函数
+/* 
+所有的类实例都共享同一个数据
+在编译阶段就分配了内存，在程序开始之前 
+在类内声明，但在类外初始化，不然编译的时候它没有初始值
+可以由类名直接访问
+静态成员函数只能访问静态的成员变量
+*/
+class Person_4
+{
+public:
+    static int s_number;  // 类内声明
+
+    static void func()  // 静态成员函数只能访问静态的成员变量 （因为它可能被类名直接调用，如果有非静态变量参与，不知道该用那个类实例下面的变量）
+    {
+        cout << "静态成员函数 func() 被调用: s_number = " << s_number << endl;
+    }
+};
+
+// 类外初始化，注意双冒号 ::
+int Person_4::s_number = 100;
+
+void test04 ()
+{
+    Person_4 p40;
+    Person_4 p41;
+
+    cout << p40.s_number << endl; 
+
+    p41.s_number = 200;  // 由另一个类的实例修改静态变量
+
+    cout << p41.s_number << endl;  // 可以看到静态变量值确实被改变了
+
+    cout << Person_4::s_number << endl;  // * 特别的，静态变量可以直接由类的名字访问，而不必用具体的类实例（但类名用 :: 分割，而不是 .）
+
+    Person_4::func();  // 通过类名直接调用静态成员函数
+
+    system("pause");
+}
 
 
 
@@ -126,7 +242,7 @@ void test01 ()
 
 
 
-int main () {
+int main_106 () {
     // 是否需要显示中文？
     bool ChineseDisplay = true;
     // bool ChineseDisplay = false;
@@ -134,7 +250,7 @@ int main () {
     if (ChineseDisplay) system("chcp 936");  // to set CMD active code page for Chinese display (the default code page is "chcp 437")
     system("cls");
 
-    test01 ();
+    test04 ();
     
     system("pause");  // System: send a DOS command, which requires including stdlib.h
     return 0;
