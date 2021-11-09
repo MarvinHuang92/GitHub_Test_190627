@@ -1,0 +1,14 @@
+每一个类可以用一组 hpp + cpp 来定义
+hpp：
+    include 系统库文件
+    类声明，函数声明
+cpp：
+    include hpp
+    函数实现
+
+最后一个main文件，里面写main函数即可
+
+不需要 include 任何cpp，cpp 和 hpp 也不需要是同名
+因为cpp里面的东西都直接给编译器看，根据作用域，系统都能找到应该实现的类或者函数
+编译的时候只是把所有的cpp都编译出obj来，再从这一堆obj中找到main函数
+这些obj无所谓顺序，所有的依赖关系都用 include hpp 搞定了
