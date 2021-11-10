@@ -1,12 +1,37 @@
 // main.cpp
 
 #include "worker_manager.hpp"
+#include "worker.hpp"
+#include "employee.hpp"
+#include "manager.hpp"
+#include "boss.hpp"
 
 int main()
 {
     // 显示中文
     system("chcp 936");  // to set CMD active code page for Chinese display (the default code page is "chcp 437")
     system("cls");
+
+
+
+    // // only for test:
+    // Worker * worker = NULL;
+    // worker = new Employee(1, "张三", 1);
+    // worker->showInfo();
+    // delete worker;
+
+    // worker = new Manager(2, "李四", 2);
+    // worker->showInfo();
+    // delete worker;
+
+    // worker = new Boss(3, "王五", 3);
+    // worker->showInfo();
+    // delete worker;
+
+    // worker = NULL;
+
+
+
 
     // Do Something
     WorkerManager wm;
@@ -24,6 +49,7 @@ int main()
             wm.exitSystem();
             break;
         case 1:  // 添加职工
+            wm.Add_Emp();
             break;
         case 2:  // 显示职工
             break;

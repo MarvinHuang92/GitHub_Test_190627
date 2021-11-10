@@ -7,6 +7,8 @@
 
 using namespace std;
 
+#include "worker.hpp"
+
 // P149 - 管理类：用户菜单界面 + 增删改查操作 + 文件管理
 class WorkerManager
 {
@@ -22,6 +24,15 @@ public:
 
     // 析构函数声明
     ~WorkerManager();
+
+    // 文件中的人数
+    int m_EmpNum;
+
+    // 员工数组指针
+    Worker ** m_EmpArray;
+
+    // 增加职工的函数
+    void Add_Emp();
 
 };
 
