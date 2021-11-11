@@ -6,13 +6,67 @@
 #include "manager.hpp"
 #include "boss.hpp"
 
+#include <fstream>
+#define FILENAME "empFile.txt"
+
 WorkerManager::WorkerManager()
 {
-    // 初始化人数
-    this->m_EmpNum = 0;
+    // // 初始化人数
+    // this->m_EmpNum = 0;
 
-    // 初始化数组指针
-    this->m_EmpArray = NULL;
+    // // 初始化数组指针
+    // this->m_EmpArray = NULL;
+
+    // 读取存储的文件
+    ifstream ifs;
+    ifs.open(FILENAME, ios::in);
+
+    // 文件不存在？
+    if(! ifs.is_open())
+    {
+        cout << "档案文件不存在" << endl;
+        this->m_EmpNum = 0;  // 初始化人数
+        this->m_fileIsEmpty = true;  // 初始化文件为空的标志
+        this->m_EmpArray = NULL;  // 初始化数组指针
+        ifs.close();  // 关闭文件
+        return;
+    }
+    else  // 文件存在
+    {
+        char ch;
+        ifs >> ch;  // 右移一个字符
+        if (ifs.eof())  // 如果右移之后读到 eof，说明文件为空
+        {
+            cout << "档案文件为空" << endl;
+            this->m_EmpNum = 0;  // 初始化人数
+            this->m_fileIsEmpty = true;  // 初始化文件为空的标志
+            this->m_EmpArray = NULL;  // 初始化数组指针
+            ifs.close();  // 关闭文件
+            return;
+        }
+        else  // 文件不为空，读取文件中现有人数，并显示出来
+        {
+            int num = this->get_EmpNum();
+            cout << "职工人数为： " << num << endl;
+            this->m_EmpNum = num;  // 初始化人数
+
+            this->m_fileIsEmpty = false;  // 初始化文件为空的标志
+            this->m_EmpArray = new Worker*[this->m_EmpNum];  // 初始化数组指针：先创建堆区数组（开辟空间）
+            this->init_Emp();   // 然后在数组中填充已知的数据
+
+            // 显示测试用：
+            for (int i = 0; i < this->m_EmpNum; i++)
+            {
+                cout << "第 " << i+1 << " 名职工： " 
+                    << "编号：" << this->m_EmpArray[i]->m_id << " "
+                    << "姓名：" << this->m_EmpArray[i]->m_name << " "
+                    << "岗位：" << this->m_EmpArray[i]->m_deptId << endl;
+            }
+
+            ifs.close();  // 关闭文件
+            return;
+        }
+    }
 }
 
 WorkerManager::~WorkerManager()
@@ -118,6 +172,12 @@ void WorkerManager::Add_Emp()
 
         // 提示添加成功
         cout << "成功添加了 " << addNum << " 名新职工。" << endl;
+        
+        // 更新标志：文件为不再为空
+        this->m_fileIsEmpty = false;
+
+        // 写入文件
+        this->save();
     }
     else
     {
@@ -127,4 +187,74 @@ void WorkerManager::Add_Emp()
 
     system("pause");
     system("cls");
+}
+
+void WorkerManager::save()
+{
+    ofstream ofs;
+    ofs.open(FILENAME, ios::out);  // 写文件
+
+    for(int i = 0; i < this->m_EmpNum; i++)
+    {
+        ofs << this->m_EmpArray[i]->m_id << " "
+            << this->m_EmpArray[i]->m_name << " "
+            << this->m_EmpArray[i]->m_deptId << endl;
+    }
+    
+    ofs.close();
+}
+
+int WorkerManager::get_EmpNum()
+{
+    ifstream ifs;
+    ifs.open(FILENAME, ios::in);
+
+    int id;
+    string name;
+    int deptId;
+
+    int num = 0;
+
+    while (ifs >> id && ifs >> name && ifs >> deptId)
+    {
+        // 记录人数
+        num++;
+    }
+    ifs.close();
+
+    return num;
+}
+
+void WorkerManager::init_Emp()
+{
+    ifstream ifs;
+    ifs.open(FILENAME, ios::in);
+
+    int id;
+    string name;
+    int deptId;
+
+    int index = 0;  // 数组脚标
+
+    while (ifs >> id && ifs >> name && ifs >> deptId)
+    {
+        // 创建具体的职工
+        Worker * worker = NULL;
+        if (deptId == 1)  // 普通职工
+        {
+            worker = new Employee(id, name, deptId);
+        }
+        else if (deptId == 2)  // 经理
+        {
+            worker = new Manager(id, name, deptId);
+        }
+        else if (deptId == 3)  // 老板
+        {
+            worker = new Boss(id, name, deptId);
+        }
+
+        this->m_EmpArray[index] = worker;
+        index++;
+    }
+    ifs.close();
 }

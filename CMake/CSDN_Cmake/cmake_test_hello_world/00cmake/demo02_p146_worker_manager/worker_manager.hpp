@@ -34,6 +34,18 @@ public:
     // 增加职工的函数
     void Add_Emp();
 
+    // 保存文件
+    void save();
+
+    // 标志文件是否为空
+    bool m_fileIsEmpty;
+
+    // 从文件中读取人数
+    int get_EmpNum();
+
+    // 初始化员工
+    void init_Emp();
+
 };
 
 
