@@ -15,11 +15,12 @@ using namespace std;
 
 // 只能出现一次template<>， 否则会报错 error: too many template-parameter-lists
 
+/*** 函数模板：template 下一行紧跟着一个函数 ***/
 // 声明模板，防止后面编译器看到 "T" 以后报错
 template<typename T> 
 
 //或者用 class 关键字亦可
-// template<class T2>
+// template<class T>
 
 // 功能函数，交换两个数，这两个数的数据类型用T代替
 void MySwap(T &a, T &b)
@@ -28,6 +29,8 @@ void MySwap(T &a, T &b)
     a = b;
     b = temp;
 }
+
+/*** 函数模板 - 结束 ***/
 
 // 使用模板函数
 void test_167()
@@ -50,8 +53,63 @@ void test_167()
 
 }
 
+/*** 类模板： template 下一行紧跟着类定义 ***/
+template<class T>
+class MyClass {
+
+};
+
+/*** 类模板 - 结束 ***/
 
 
+// P170 利用模板写一个给 int 或者 char 通用的数组降序排序函数
+
+// 用于打印数组的所有元素
+template<class T>
+void MyPrintArr(T arr[], int len)
+{
+    for (int i = 0; i < len; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
+
+// 用于排序
+template<class T>
+void MySort(T arr[], int len)  // 第二个参数是数组长度
+{
+    // “选择排序”算法（就是冒泡方法）
+    for (int i = 0; i < len; i++)
+    {
+        // 从第一个元素开始，先假设它就是最大值，下标记作max（其实就是 i）
+        int max = i;
+        for (int j = i+1; j < len; j++)
+        {
+            // 如果认定的最大值比 j 还要小，交换这两个值
+            if (arr[max] < arr[j])
+            {
+                // 这里利用了另一个模板函数，交换两个值
+                MySwap(arr[max], arr[j]);
+            }
+        }
+    }
+    // 打印排序后的结果
+    MyPrintArr(arr, len);
+}
+
+// 测试函数： 分别用 int 数组和 char 数组测试
+void test_170()
+{
+    int Arr_1[] = {5,2,3,1,4,4,8,8};
+    int length_1 = sizeof(Arr_1) / sizeof(Arr_1[0]);
+
+    char Arr_2[] = "abcdeffgg";
+    int length_2 = sizeof(Arr_2) / sizeof(Arr_2[0]);
+
+    MySort(Arr_1, length_1);
+    MySort(Arr_2, length_2);
+}
 
 
 /*********************************************************************************************************/
@@ -67,6 +125,7 @@ int main () {
     system("cls");
 
     test_167 ();
+    test_170 ();
     
     system("pause");  // System: send a DOS command, which requires including stdlib.h
     return 0;
