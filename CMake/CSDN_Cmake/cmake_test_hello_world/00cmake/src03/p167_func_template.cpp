@@ -1,4 +1,4 @@
-// p167_template.cpp
+// p167_func_template.cpp
 
 #include <iostream>
 #include <stdlib.h>
@@ -32,6 +32,12 @@ void MySwap(T &a, T &b)
 
 /*** 函数模板 - 结束 ***/
 
+template<class T>
+T MyAdd (T a, T b)
+{
+    return a + b;
+}
+
 // 使用模板函数
 void test_167()
 {
@@ -41,9 +47,15 @@ void test_167()
     MySwap(a, b);  
 
     // 方法2：手动指定数据类型，注意这个 <> 指代的是 template<typename T> 在这一次需要表现为 double 类型
+    // 这个方法的好处：支持隐式类型转换，例如声明了使用 <int>，参数传入 char 或者 float，依然可以运行
     double c = 10.5;
     double d = 20.5;
     MySwap<double>(c, d);
+
+    int e = 10;
+    float f = 70.0;
+    char g = 'G';  // ASCII F = 0x47 = 71
+    // MyAdd<int>(e, f);
 
     cout << "a = " << a << endl;
     cout << "b = " << b << endl;
@@ -51,6 +63,8 @@ void test_167()
     cout << "c = " << c << endl;
     cout << "d = " << d << endl;
 
+    cout << "e + f = " << MyAdd<int>(e, f) << endl;
+    cout << "e + g = " << MyAdd<int>(e, g) << endl;
 }
 
 /*** 类模板： template 下一行紧跟着类定义 ***/
@@ -116,7 +130,7 @@ void test_170()
 
 
 
-int main () {
+int main_167 () {
     // 是否需要显示中文？
     // bool ChineseDisplay = true;
     bool ChineseDisplay = false;
