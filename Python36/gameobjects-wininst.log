@@ -1,0 +1,19 @@
+*** Installation started 2018/05/08 00:50 ***
+Source: D:\Ñ¸À×ÏÂÔØ\gameobjects-0.0.3.win32.exe
+999 Root Key: HKEY_CURRENT_USER
+020 Reg DB Key: [Software\Microsoft\Windows\CurrentVersion\Uninstall]gameobjects-py3.6
+040 Reg DB Value: [Software\Microsoft\Windows\CurrentVersion\Uninstall\gameobjects-py3.6]DisplayName=Python 3.6 gameobjects-0.0.3
+040 Reg DB Value: [Software\Microsoft\Windows\CurrentVersion\Uninstall\gameobjects-py3.6]UninstallString="D:\Program Files\Python36\Removegameobjects.exe" -u "D:\Program Files\Python36\gameobjects-wininst.log"
+200 File Copy: D:\Program Files\Python36\Lib\site-packages\gameobjects-0.0.3-py2.5.egg-info
+100 Made Dir: D:\Program Files\Python36\Lib\site-packages\gameobjects
+200 File Copy: D:\Program Files\Python36\Lib\site-packages\gameobjects\sphere.py
+200 File Copy: D:\Program Files\Python36\Lib\site-packages\gameobjects\vector3.py
+200 File Copy: D:\Program Files\Python36\Lib\site-packages\gameobjects\color.py
+200 File Copy: D:\Program Files\Python36\Lib\site-packages\gameobjects\gametime.py
+200 File Copy: D:\Program Files\Python36\Lib\site-packages\gameobjects\grid.py
+200 File Copy: D:\Program Files\Python36\Lib\site-packages\gameobjects\locals.py
+200 File Copy: D:\Program Files\Python36\Lib\site-packages\gameobjects\matrix44.py
+200 File Copy: D:\Program Files\Python36\Lib\site-packages\gameobjects\test_vector3.py
+200 File Copy: D:\Program Files\Python36\Lib\site-packages\gameobjects\util.py
+200 File Copy: D:\Program Files\Python36\Lib\site-packages\gameobjects\vector2.py
+200 File Copy: D:\Program Files\Python36\Lib\site-packages\gameobjects\__init__.py

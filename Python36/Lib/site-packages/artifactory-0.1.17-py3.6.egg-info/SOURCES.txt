@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+artifactory.py
+setup.cfg
+setup.py
+artifactory.egg-info/PKG-INFO
+artifactory.egg-info/SOURCES.txt
+artifactory.egg-info/dependency_links.txt
+artifactory.egg-info/not-zip-safe
+artifactory.egg-info/requires.txt
+artifactory.egg-info/top_level.txt
