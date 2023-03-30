@@ -50,7 +50,7 @@ while True:
         result1 = current_data['current_url']
         result2 = current_data['report'] + '  ' + calc_prize.calc_prize(default_array, current_data['lottery_num'])
         # 在屏幕显示结果
-        print(result2)
+        print("全国" + result2)
         # 将结果附加在历史记录中
         content.append(result1+ '\n')
         content.append(result2+ '\n')
