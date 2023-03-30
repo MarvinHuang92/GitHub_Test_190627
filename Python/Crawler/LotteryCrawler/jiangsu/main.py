@@ -50,14 +50,13 @@ while True:
         result1 = current_data['current_url']
         result2 = current_data['report'] + '  ' + calc_prize.calc_prize(default_array, current_data['lottery_num'])
         # 如果是星期4的结果
-        # if current_data['weekday'] == '星期四':
-        # 在屏幕显示结果
-        print(result2)
-        print(current_data)
-        # 将结果附加在历史记录中
-        content.append(result1+ '\n')
-        content.append(result2+ '\n')
-        content.append('\n')  # 一个空白行，方便人工阅读ini文件
+        if int(current_data['batch_no']) > 23045 or current_data['weekday'] == '星期四':
+            # 在屏幕显示结果
+            print("江苏 " + result2)
+            # 将结果附加在历史记录中
+            content.append(result1+ '\n')
+            content.append(result2+ '\n')
+            content.append('\n')  # 一个空白行，方便人工阅读ini文件
     # 重置状态，否则将持续跳过
     history_read = False
 
