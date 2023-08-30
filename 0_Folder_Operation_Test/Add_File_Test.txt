@@ -1,7 +1,0 @@
-this file is added manually in Windows Notepad
-
-
-this file is modified here
-
-
-test for new SSH commit (to see if the SSH in Github.com was used once after this commit)
